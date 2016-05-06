@@ -28,19 +28,18 @@
                         <a href="#">定制</a>
                         <ul class="dropdown-menu">
                             <li><a href="shoushudaoban.html">手术导板定制</a></li>
-                            <li><a href="gongyedingzhi.html">工业/个性化定制</a></li>
                         </ul>
                     </li>
-                    <li><a href="model.jsp">模型库</a></li>
+                    <li><a href="model.html">模型库</a></li>
                     <li><a href="designer.html">设计师</a></li>
-                    <li class="active"><a>加盟/入驻</a></li>
+                    <li><a href="join.html">加盟/入驻</a></li>
                     <li><a href="shangcheng.html">商城</a></li>
-                    <li><a href="dingdanguanli.html">我的订单</a></li>
+                     <li class="active"><a>我的订单</a></li>
                 </ul>
                 <!-- 右边占位 -->
                 <div class="navbar-right"></div>
                 <ul class="nav navbar-nav navbar-right">
-                    <a href="login.jsp" class="btn btn-primary navbar-btn">登录</a>
+                    <a href="login.html" class="btn btn-primary navbar-btn">登录</a>
                     <a href="register.html" class="btn btn-default navbar-btn">注册</a>
                 </ul>
                 <!-- 搜索框 -->
@@ -167,9 +166,31 @@
                                     <p>
                                         <input type="radio" value="" name=>收货地址一</p>
                                     <p>
-                                        <input type="radio" value="">收货地址二</p>
+                                        <input type="radio" value="">收货地址54564564564二</p>
                                 </form>
-                                <a class="btn-continue" href=""><i class="fa fa-plus"></i>使用新地址</a>
+                                <a class="btn-continue" onclick="$(this).next().next().show();  "id="text66"><i class="fa fa-plus"></i>使用新地址</a>
+                                <br>
+                                <div class="col-md-6" id="check" style="display: none;">
+                                    <div class="inner-step ">
+                                        <form>
+                                            <input type="text" placeholder="姓名">
+                                            <input type="text" placeholder="省份">
+                                            <input type="text" placeholder="城市">
+                                            <input type="text" placeholder="地区">
+                                            <input type="text" placeholder="邮件编码">
+                                            <p>
+                                                <textarea type="text" placeholder="详细地址"></textarea>
+                                            </p>
+                                            <input class="email_address" type="text" placeholder="邮箱">
+                                            <input class="phone_number" type="text" placeholder="联系电话">
+                                            <div class="form-footer">
+                                                <p>
+                                                    <input type="radio" value="">设为默认收货地址</p>
+                                                <a class="btn-continue" onclick="$(this).parent().parent().parent().parent().hide();"><i class="fa fa-plus"></i>保存</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <br>
@@ -278,7 +299,7 @@
                     <h2><span class="glyphicon glyphicon-user"></span> 我是设计师</h2>
                 </li>
                 <li class="col-lg-2">
-                    <h2><span class="glyphicon glyphicon-cog"></span> 云制造</h2>
+                    <h2><span class="glyphicon glyphicon-cog"></span> 我是加盟商</h2>
                 </li>
                 <li class="col-lg-2">
                     <h2><span class="glyphicon glyphicon-wrench"></span> 服务支持</h2>

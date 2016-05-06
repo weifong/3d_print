@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>订单管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/dingdanguanli.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.patch.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+    body,td,th {
+	font-size: 14px;
+}
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Brand" width="147"   height="52">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="nav_first">
+                        <a href="#">定制</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shoushudaoban.html">手术导板定制</a></li>
+                            <li><a href="gongyedingzhi.html">工业/个性化定制</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="model.html">模型库</a></li>
+                    <li><a href="designer.html">设计师</a></li>
+                    <li><a href="join.html">加盟/入驻</a></li>
+                    <li><a href="shangcheng.html">商城</a></li>
+                   <li><a href="dingdanguanli.html">我的订单</a></li>
+                </ul>
+                <!-- 右边占位 -->
+                <div class="navbar-right"></div>
+                <ul class="nav navbar-nav navbar-right">
+                    <a href="login.html" class="btn btn-primary navbar-btn">登录</a>
+                    <a href="register.html" class="btn btn-default navbar-btn">注册</a>
+                </ul>
+                <!-- 搜索框 -->
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="搜索">
+                    </div>
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-default">GO</button>
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu nav_search_option">
+                            <!-- <label><a><input type="radio" name="search_option" />资讯</label> -->
+                            <li class="active">
+                                <a>
+                                    <input type="radio" class="hidden" name="search_option" value="info" checked="checked" />资讯</a>
+                            </li>
+                            <li>
+                                <a>
+                                    <input type="radio" class="hidden" name="search_option" value="model" />模型</a>
+                            </li>
+                            <li>
+                                <a>
+                                    <input type="radio" class="hidden" name="search_option" value="product" />商品</a>
+                            </li>
+                            <li>
+                                <a>
+                                    <input type="radio" class="hidden" name="search_option" value="designer" />设计师</a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- 侧边栏 -->
+    <div class="slide_bar">
+        <ul class="nav nav-list panel panel-default" role="group">
+            <li>
+                <a href="#section-1">
+                    <br />咨询</a>
+            </li>
+            <li>
+                <a href="#section-2">
+                    <br />电话</a>
+            </li>
+            <li>
+                <a href="#section-3">
+                    <br />微信</a>
+            </li>
+            <li>
+                <a href="#section-4">
+                    <br />微博</a>
+            </li>
+            <li>
+                <a id="btn_to_top">
+                    <br />顶部</a>
+            </li>
+        </ul>
+    </div>
+    <!-- 页面主体 -->
+    <table width="1095" height="635" border="0">
+      <tr>
+        <td width="514" height="631"><img src="img/1.png"></td>
+        <td width="532" bgcolor="#FFFFFF" font size=26><p>付款成功，您的订单已被XXX受理。</p>
+        <p>商家地址：</p>
+        <p>联系方式：</p></td>
+      </tr>
+    </table>
+</div>
+    <!-- 底部 -->
+    <footer class="section section-primary">
+        <div class="container">
+            <ul class="row list-unstyled footer_top_list">
+                <li class="col-lg-2">
+                    <h2><span class="glyphicon glyphicon-book"></span> 设计指南</h2>
+                </li>
+                <li class="col-lg-2">
+                    <h2><span class="glyphicon glyphicon-shopping-cart"></span> 交易指南</h2>
+                </li>
+                <li class="col-lg-2">
+                    <h2><span class="glyphicon glyphicon-user"></span> 我是设计师</h2>
+                </li>
+                <li class="col-lg-2">
+                    <h2><span class="glyphicon glyphicon-cog"></span>我是加盟商</h2>
+                </li>
+                <li class="col-lg-2">
+                    <h2><span class="glyphicon glyphicon-wrench"></span> 服务支持</h2>
+                    <ul class="list-unstyled footer_second_list">
+                        <li><a href="#">关于我们</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    function goumai() {
+        $("div[class=panel-body]").show();
+    }
+    </script>
+</body>
+
+</html>

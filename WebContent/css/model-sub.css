@@ -57,3 +57,7 @@
 .all_comment{
 	clear: both;
 }
+.btn_praise,
+.btn_download {
+	cursor: pointer;
+}

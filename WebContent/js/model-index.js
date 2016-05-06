@@ -1,6 +1,18 @@
 $(document).ready(function(){
 	$(".pic_big>li").css('display', 'none');
 	carousel($(".pic_carousel"));
+
+	/* 下载点击事件 */
+	$(".btn_download").click(function () {
+		alert("点击了下载");
+		return false;
+	});
+
+	/* 赞点击事件 */
+	$(".btn_praise").click(function () {
+		alert("您赞了一下");
+		return false;
+	});
 });
 
 

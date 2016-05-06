@@ -3,11 +3,7 @@
 <%@ page language="java" pageEncoding="utf-8" import="java.sql.ResultSet"%> 
 <%@ page contentType="text/html;charset=utf-8"%> 
 <%@include file="Parameter.jsp" %>
-<% 
-request.setCharacterEncoding("UTF-8"); 
-response.setCharacterEncoding("UTF-8"); 
-response.setContentType("text/html; charset=utf-8"); 
-%> 
+
 <head>
 	<meta charset="UTF-8">
 	<title>模型库</title>
