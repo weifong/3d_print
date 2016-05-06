@@ -1,0 +1,59 @@
+/* 模型详情 */
+
+/* 缩略图 */
+.pic_sm_container{
+	margin-top: 10px;
+}
+.pic_sm_container > .col-lg-2dot4 {
+	padding: 0 5px;
+}
+
+/* 详细参数 */
+/* 标题 */
+.model_detail > h1 {
+	color: #333;
+	font-size: 24px;
+	font-weight: bold;
+	height: 55px;
+	line-height: 30px;
+}
+.model_detail > .btn-group{
+	margin-top: 50px;
+}
+.model_detail > .btn-group > .btn {
+	font-size: 20px;
+}
+.model_detail > .footer {
+	padding-top: 30px;
+	width: 240px;
+	margin: 0 auto;
+	border-top: 1px #E8E8E8 solid;
+	color: #939393;
+	font-size: 13px;
+}
+.model_detail > .footer > div {
+	text-align: center;
+}
+.model_detail > .footer .glyphicon {
+	display: block;
+	font-size: 30px;
+	line-height: 50px;
+}
+
+/* 评论区 */
+
+/* 提交评论区 */
+.comment_container {
+	padding: 10px 20px;
+}
+.comment_container >h2 {
+	color: #373737;
+	font-size: 18px;
+}
+.comment_submit {
+	margin-top: 20px;
+}
+/* 全部评论 */
+.all_comment{
+	clear: both;
+}

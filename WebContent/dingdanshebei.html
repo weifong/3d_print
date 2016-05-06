@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>设备订单页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/dingdan.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.patch.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a href="index.html">
+                    <img alt="Brand" src="images/logo.png" height="50px">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="nav_first">
+                        <a href="#">定制</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shoushudaoban.html">手术导板定制</a></li>
+                            <li><a href="gongyedingzhi.html">工业/个性化定制</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="model.jsp">模型库</a></li>
+                    <li><a href="designer.html">设计师</a></li>
+                    <li class="active"><a>加盟/入驻</a></li>
+                    <li><a href="shangcheng.html">商城</a></li>
+                    <li><a href="dingdanguanli.html">我的订单</a></li>
+                </ul>
+                <!-- 右边占位 -->
+                <div class="navbar-right"></div>
+                <ul class="nav navbar-nav navbar-right">
+                    <a href="login.jsp" class="btn btn-primary navbar-btn">登录</a>
+                    <a href="register.html" class="btn btn-default navbar-btn">注册</a>
+                </ul>
+                <!-- 搜索框 -->
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="搜索">
+                    </div>
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-default">GO</button>
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu nav_search_option">
+                            <!-- <label><a><input type="radio" name="search_option" />资讯</label> -->
+                            <li class="active">
+                                <a>
+                                    <input type="radio" class="hidden" name="search_option" value="info" checked="checked" />资讯</a>
+                            </li>
+                            <li>
+                                <a>
+                                    <input type="radio" class="hidden" name="search_option" value="model" />模型</a>
+                            </li>
+                            <li>
+                                <a>
+                                    <input type="radio" class="hidden" name="search_option" value="product" />商品</a>
+                            </li>
+                            <li>
+                                <a>
+                                    <input type="radio" class="hidden" name="search_option" value="designer" />设计师</a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- 侧边栏 -->
+    <div class="slide_bar">
+        <ul class="nav nav-list panel panel-default" role="group">
+            <li>
+                <a href="#section-1">
+                    <br />咨询</a>
+            </li>
+            <li>
+                <a href="#section-2">
+                    <br />电话</a>
+            </li>
+            <li>
+                <a href="#section-3">
+                    <br />微信</a>
+            </li>
+            <li>
+                <a href="#section-4">
+                    <br />微博</a>
+            </li>
+            <li>
+                <a id="btn_to_top">
+                    <br />顶部</a>
+            </li>
+        </ul>
+    </div>
+    <!-- 页面主体 -->
+    <div class="container wrap wrapper">
+        <section class="product_detail_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                        <div class=" ">
+                            <div class="product_main_img tab-content">
+                                <div id="one" class="p_tab_img active">
+                                    <a href="#"><img src="img/product_detail1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                        <div class="product_detail">
+                            <div class="product_title">
+                                <h2>设备名字</h2>
+                                <br>
+                                
+                                <p>很长的产品描述Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in cillum dolore.</p>
+                                <h3>
+                                    材料单价：$75.00/g
+                                    <del>$80.00/g</del>
+                                </h3>
+                                                       <div class="size_quantity clearfix">
+
+                                    <div class="size">
+                                        <h2>购买数量</h2>
+                                        <input type="" value="5"> 台
+                                    </div>
+                                    <div class="size">
+                                        <h2>设备供应商</h2>
+                                        <input type="" value="西大一条龙"> 
+                                    </div>
+                                </div>
+                                <div class="product_details_color">
+                                    <div class="size"></div>
+                                        <h2>合计 ：<strong>10000 </strong>元</h2>
+                                       
+                                    
+                                    <br>
+                                    <div class="favorite_icons">
+                                        
+                                        <a href="#" onclick="goumai();" class="add_to_cart">立即购买</i></a>
+                                        <a href="#" class="add_to_cart">加入购物车</a>
+                                    </div>
+
+                                </div>
+                       
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body" style="display: none;">
+                    <div class="col-md-12">
+                        <div class="guest-or-user row">
+                            <div class="col-md-12">
+                                <h5>确认收货地址</h5>
+                                <form action="#">
+                                    <p>
+                                        <input type="radio" value="" name=>收货地址一</p>
+                                    <p>
+                                        <input type="radio" value="">收货地址二</p>
+                                </form>
+                                <a class="btn-continue" href=""><i class="fa fa-plus"></i>使用新地址</a>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="guest-or-user row">
+                            <div class="col-md-12">
+                                <table class="table">
+                                    <h5> 确认订单信息</h5>
+                                    <thead>
+                                        <tr>
+                                            <th>清单</th>
+                                            <th>数量</th>
+                                            <th>单价</th>
+                                            <th>总价</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div><strong>一只喜羊羊</strong>
+                                                </div>
+                                            </td>
+                                            <td>1</td>
+                                            <td>&yen;26.00</td>
+                                            <td>&yen;31,98</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div style="width:800px;height:1px;margin:0px auto;padding:0px;background-color:#D5D5D5;overflow:hidden;"></div>
+                        <div class="guest-or-user row">
+                            <div class="col-md-3">
+                                <div class="quantity">
+                                    <br>
+                                    <h2>打印商昵称：<small>西大一条龙</small></h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3 ">
+                                <div class="quantity">
+                                    <br>
+                                    <h2>QQ：<small>西大第二条龙</small></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <img src="img/product_detail1.jpg" data-zoom-image="img/product_detail1.jpg" alt="">
+                        </div>
+                        <div class="col-sm-3">
+                            <h5>叫啥名</h5>
+                            <div class="size_quantity clearfix">
+                                <div class="size">
+                                    <h2>尺寸</h2>
+                                    <div class="size_form">
+                                        <a href="#">1920*1080</a>
+                                    </div>
+                                </div>
+                                <div class="quantity">
+                                    <h2>颜色</h2>
+                                    <div class="color_spans">
+                                        <a href="#"><span class="blue"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" style="height:80px;" placeholder="给卖家留言"></input>
+                        </div>
+                        <div class="col-md-3">
+                            <h5> 配送方式</h5>
+                            <select>
+                                <option value='' selected>顺丰</option>
+                                <option value=''>其他快递</option>
+                            </select>
+                        </div>
+                        <div class="row col-md-12">
+                            <div class="col-md-4 pull-right">
+                                <div style="border: 1px solid #E1E1E1;">
+                                    <p class="pull-right">实付款：</p>
+                                    <br>
+                                    <p class="pull-left">寄送至：</p>
+                                    <br>
+                                    <p class="pull-right">收货人：</p>
+                                    <br>
+                                </div>
+                                <br>
+                                <a class="favorite_icons pull-right" href="#"><i class="fa fa-exchange">提交订单</i></a>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        </div>
+        <!-- 底部 -->
+    <footer class="section section-primary">
+        <div class="container">
+            <ul class="row list-unstyled footer_top_list">
+                <li class="col-lg-2">
+                    <h2><span class="glyphicon glyphicon-book"></span> 设计指南</h2>
+                </li>
+                <li class="col-lg-2">
+                    <h2><span class="glyphicon glyphicon-shopping-cart"></span> 交易指南</h2>
+                </li>
+                <li class="col-lg-2">
+                    <h2><span class="glyphicon glyphicon-user"></span> 我是设计师</h2>
+                </li>
+                <li class="col-lg-2">
+                    <h2><span class="glyphicon glyphicon-cog"></span> 云制造</h2>
+                </li>
+                <li class="col-lg-2">
+                    <h2><span class="glyphicon glyphicon-wrench"></span> 服务支持</h2>
+                    <ul class="list-unstyled footer_second_list">
+                        <li><a href="#">关于我们</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </footer>
+        <script src="js/jquery.min.js"></script>
+        <script type="text/javascript">
+        function goumai() {
+            $("div[class=panel-body]").show();
+        }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+*{
+    -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+            box-sizing: border-box;
+			
+}
+body{
+	overflow-x:hidden;
+  /*   background-color: aquamarine; */
+}
+.wrapper{
+ max-width: 1920px;
+    height: 1400px;
+	
+	/* 兼容小屏幕的居中 */
+	position:relative;
+	left:50%;
+	margin-left:-960px; /* 这里设置成宽度的一半 */
+}
+.head {
+    height: 44px; 
+    width: 1920px;
+    position: relative;
+  /*   background-color: greenyellow; 
+     */
+}
+.fenlei{
+	position:relative;
+	/* width:1920px;  */
+	height:500px;
+	/* <background-color: id="a3c5f4"></background-color:> */
+}
+.fenlei article{
+	width:760px;
+	height:500px;
+	/* float:left; */
+	position:absolute;
+	top:0px;
+	left:240px;
+	/* <background-color: id="47da90"></background-color:> */
+}
+article a:link,article a:visited
+{
+	display:block;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#8fdfc4;
+	width:580px;
+	text-align:center;
+	padding:4px;
+	text-decoration:none;
+}
+article a:hover,article a:active
+{
+	background-color:#3431c0;
+}
+article table{
+		/* position:relative;
+		left:40px; */
+		margin:0 auto;
+}
+.zhanshi{
+	height:800px;
+	/* <background-color: id="d79aed"></background-color:> */
+}
+	.zhanshi table{
+		margin:0 auto;
+	}
+		.zhanshi td{
+			width:460px;
+			height:300px;
+			background-color:#57add9;
+			padding: 15px;
+		}
+		.zhanshi a{
+			display:block;
+		}
+		.zhanshi a img{
+			width:100%;
+			height:100%;
+			
+		}
+		.zhanshi a:hover img {
+			-webkit-transform: scale(1.05);
+		}

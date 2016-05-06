@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en-US">
+<!--<![endif]-->
+
+<head>
+	<title>Creative Kitten</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- <link rel="stylesheet" href="http://fonts.useso.com/css?family=Merriweather:400,700"> -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="designer_person/css/style.css">
+	<link rel="stylesheet" href="designer_person/css/animate.min.css">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="designer_person/js/wow.min.js"></script>
+	<script src="designer_person/js/classie.js"></script>
+	<script>
+		function init() {
+			window.addEventListener('scroll', function(e){
+				var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+					shrinkOn = 300,
+					header = document.querySelector("header");
+				if (distanceY > shrinkOn) {
+					classie.add(header,"smaller");
+				} else {
+					if (classie.has(header,"smaller")) {
+						classie.remove(header,"smaller");
+					}
+				}
+			});
+		}
+		window.onload = init();
+	</script>
+	<script type="text/javascript">
+		new WOW().init();
+	</script>
+	<script type="text/javascript">
+		$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		  var target = $(this.hash);
+		  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		  if (target.length) {
+			$('html,body').animate({
+			  scrollTop: target.offset().top
+			}, 1000);
+			  return false;
+			}
+		  }
+		});
+	  });
+
+	</script>
+
+
+
+	<link rel="stylesheet" href="css/common.css"/>
+	<script src="js/common.js"></script>
+
+</head>
+ 
+<body>
+	<header id="header" class="navbar-fixed-top">
+		<div class="container-fluid">
+            <div class="navbar-header">
+                <a href="index.html">
+                     <img alt="Brand" src="images/logo.png" height="50px">
+                </a>
+            </div>
+    		<!-- <a href="#" hreflang="fr"></a> -->
+    		
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="nav_first">
+                        <a href="#">定制</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shoushudaoban.html">手术导板定制</a></li>
+                            <li><a href="gongyedingzhi.html">工业/个性化定制</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="model.jsp">模型库</a></li>
+                    <li><a href="designer.html">设计师</a></li>
+                    <li><a href="join.html">加盟/入驻</a></li>
+                    <li><a href="shangcheng.html">商城</a></li>
+                    <li><a href="dingdanguanli.html">我的订单</a></li>
+                </ul>
+
+                <!-- 右边占位 -->
+                <div class="navbar-right"></div>
+                <ul class="nav navbar-nav navbar-right">
+                    <a href="login.jsp" class="btn btn-primary navbar-btn">登录</a>
+					<a href="register.html" class="btn btn-default navbar-btn">注册</a>
+                    <a class="btn btn-default navbar-btn" href="#contact">联系我们</a>
+                </ul>
+                <!-- 搜索框 -->
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="搜索">
+                    </div>
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-default">GO</button>
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu nav_search_option">
+                            <!-- <label><a><input type="radio" name="search_option" />资讯</label> -->
+                            <li class="active"><a><input type="radio" class="hidden" name="search_option" value="info" checked="checked" />资讯</a></li>
+                            <li><a><input type="radio" class="hidden" name="search_option" value="model" />模型</a></li>
+                            <li><a><input type="radio" class="hidden" name="search_option" value="product" />商品</a></li>
+                            <li><a><input type="radio" class="hidden" name="search_option" value="designer" />设计师</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div><!-- /.navbar-collapse -->
+    		<!-- <div class="visible-nav navbar-right visible-xs">
+    			<a href="#" hreflang="fr">FR</a>
+    			<a class="active" href="index.html" hreflang="en-US">EN</a>
+    			<a href="#contact">Contact</a>
+    		</div> -->
+        </div>
+	</header>
+ 			
+  	<div class="intro white">
+  		<div class="container wow animated fadeInUp">
+	  		<p class="lead-creative top-margin" >我们创造未来，改变现在
+		</p>
+	  		
+	  		<p id="office-place" class="office-place">来自 <strong>创客团队</strong></p>
+  		</div><!-- /.container -->
+  	</div><!-- /.intro -->
+
+	<div class="section" id="members">
+		<div class="container">
+			<h2>我们是谁</h2>
+			<hr>
+			<p class="lead-creative-banner">团队介绍</p>
+			<div class="row">
+				<div class="col-md-4">
+					<figure class="wow animated fadeInLeft">
+						<img class="border-img img-responsive center-block" src="designer_person/images/Reza.jpg" alt="John" width="280" height="280">
+					</figure>
+					<div class="imgcaption">
+						<strong>John <span class="name">Doe</span></strong>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<figure class="wow animated fadeInDown">
+						<img class="border-img img-responsive center-block" src="designer_person/images/jewel.jpg" alt="Jan" width="280" height="280">
+					</figure>
+					<div class="imgcaption">
+						<strong>Jane <span class="name">Doe</span></strong>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<figure class="wow animated fadeInRight">
+						<img class="border-img img-responsive center-block" src="designer_person/images/Reza.jpg" alt="Reza" width="280" height="280">
+					</figure>
+					<div class="imgcaption">
+						<strong>Reza <span class="name">Doe</span></strong>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- members -->
+	
+
+	<div class="section" id="our-info">
+		<div class="container">
+			<h2>我们可以做</h2>
+			<hr />
+			<div class="row">
+				<div class="col-sm-6 wow animated fadeInLeft">
+					<figure>
+						<img class="z-hover img-responsive" src="designer_person/images/pc1.jpg" alt="Macbook">
+					</figure>
+					<h4>案例</h4>
+					<p class="function-text">案例介绍 </p>
+				</div>
+				<div class="col-sm-6 wow animated fadeInRight">
+					<figure>
+						<img class="z-hover img-responsive" src="designer_person/images/pc2.jpg" alt="Macbook">
+					</figure>
+					<h4>案例</h4>
+					<p class="function-text">案例介绍</p>
+				</div>
+			</div>
+		</div>
+	</div><!-- our-info -->
+
+	<div class="section" id="our-service">
+		<div class="container">
+			<h3>我们的服务</h3>
+			<div class="row">
+				<div class="col-md-3 wow animated zoomIn">
+					<ul>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3 wow animated zoomIn">
+					<ul>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+						<li class="service-list">
+							<strong>服务1</strong>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3 wow animated zoomIn">
+					<ul>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3 wow animated zoomIn">
+					<ul>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+						<li class="service-list">
+							<strong>服务</strong>
+						</li>
+						<li class="service-list">
+							<strong>服务1</strong>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div><!-- our-service -->
+
+	<div class="section" id="CTA-1">
+		<div class="container">
+			<h2 class="white">还在犹豫什么</h2>
+			<div class="text-center">
+				<a class="btn btn-large btn-border" href="#contact">联系我们</a>
+			</div>
+		</div>
+	</div>
+  	
+  	
+
+	<div class="section" id="branding">
+		<div class="container">
+			<h2>为什么选择我们</h2>
+			<hr />
+			<div class="row">
+				<div class="col-sm-6 wow animated zoomIn" data-wow-delay=".3s">
+					<h4>1.理由</h4>
+					<p> 描述
+				<div class="col-sm-6 wow animated zoomIn" data-wow-delay=".3s">
+					<h4>2. 理由</h4>
+					<p> 描述</p> 
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 wow animated zoomIn" data-wow-delay=".3s">
+					<h4>3.理由</h4>
+					<p> 描述</p>
+				</div>
+				<div class="col-sm-6 wow animated zoomIn" data-wow-delay=".3s">
+					<h4>4. 理由</h4>
+					<p> 描述</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 wow animated zoomIn" data-wow-delay=".3s">
+					<h4>5. 理由</h4>
+					<p>描述</p>
+				</div>
+				<div class="col-sm-6 wow animated zoomIn" data-wow-delay=".3s">
+					<h4>6. 理由</h4>
+					<p> 描述</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section" id="banner-4">
+		<div class="container">
+			<h2 class="white wow animated zoomIn" data-wow-delay="1s">创意无限 <br />你准备好了吗？</h2>
+		</div>
+	</div>
+
+
+	<div class="section" id="contact">
+  		<div class="container">
+			<h2 class="white">联系我们 </h2>
+			<form id="contact-us" method="post" action="contact.php">
+				<div class="row">
+					<div class="col-sm-6 wow animated fadeInLeft">
+						<input type="text" name="name" id="name" required class="form" placeholder="姓名" />
+						<input type="email" name="email" id="email" required class="form" placeholder="邮件" />
+						<input type="text" name="subject" id="subject" required class="form" placeholder="项目" />
+					</div>
+					<div class="col-sm-6 wow animated fadeInRight">
+						<textarea name="message" id="message" class="form textarea"  placeholder="具体的"></textarea>
+					</div>
+				</div>
+				<div class="text-center">
+					<button type="submit" id="submit" name="submit" class="form-btn semibold">提交</button>
+				</div>
+			</form>
+		</div>
+	</div>
+    </div>
+
+  	<!-- 底部 -->
+    <footer>
+        <div class="container">
+            <ul class="row list-unstyled footer_top_list">
+                <li class="col-lg-2">
+                    <h2><span class="glyphicon glyphicon-book"></span> 设计指南</h2>
+                </li>
+                <li class="col-lg-2">
+                    <h2><span class="glyphicon glyphicon-shopping-cart"></span> 交易指南</h2>
+                </li>
+                <li class="col-lg-2">
+                    <h2><span class="glyphicon glyphicon-user"></span> 我是设计师</h2>
+                </li>
+                <li class="col-lg-2">
+                    <h2><span class="glyphicon glyphicon-cog"></span> 云制造</h2>
+                </li>
+                <li class="col-lg-2">
+                    <h2><span class="glyphicon glyphicon-wrench"></span> 服务支持</h2>
+                    <ul class="list-unstyled footer_second_list">
+                        <li><a href="#">关于我们</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

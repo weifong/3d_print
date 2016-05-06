@@ -1,0 +1,121 @@
+body .container > div {
+	padding: 0 10px;
+	margin-bottom: 20px;
+}
+
+body .container > div > .panel {
+	height: 100%;
+}
+
+body > .container  {
+	min-height: 730px;
+}
+
+/* 板块一 */
+.block1{
+	padding-left: 10px;
+}
+
+/* 板块三 入驻/加盟按钮 */
+.join_btn_group > a {
+	height: 50%;
+	background-color: #F5F5F5;
+	border-bottom: 1px solid #E5E5E5;
+	color: #000;
+	display: block;
+}
+.join_btn_group > a {
+	height: 50%;
+	background-color: #F5F5F5;
+	border-bottom: 1px solid #E5E5E5;
+	color: #000;
+	display: block;
+}
+.join_btn_group > a {
+	height: 50%;
+	background-color: #F5F5F5;
+	border-left:3px solid transparent;
+	border-bottom: 1px solid #E5E5E5;
+	color: #000;
+	display: block;
+	font-size: 20px;
+	text-decoration: none;
+	text-align: center;
+}
+.join_btn_group > a:hover {
+	background-color: transparent;
+	border-left-color:#1b87c7;
+	/* transition: all 0.5s ease 0.2s; */
+}
+.join_btn_group > a > div {
+	line-height: 150px;
+}
+.join_btn_group > a .big {
+	color: #939393;
+	font-size: 25px;
+}
+
+/* 板块四 流程 */
+.process {
+	padding-left: 30px;
+}
+
+/* 流程步骤 */
+.process > div{
+	font-size: 16px;
+}
+.navposition {
+	margin-top: 30px;
+}
+.navposition > nav .pagination {
+	float: left;
+}
+.navposition > nav > div {
+	overflow: hidden;
+	width: 560px;
+	margin: 0 auto;
+}
+
+.navposition > nav .target {
+	width: 50px;
+
+}
+
+.navposition > nav {
+	line-height: 55px;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+/* 进度条样式 */
+/* 
+.process > .progress{
+	margin-right: 20px;
+	height: 30px;
+}
+.process > .progress > .progress-bar {
+	font-size: 16px;
+	line-height: 30px;
+	text-indent: 10px;
+	width: 25%;
+	position: relative;
+}
+.process > .progress > .progress-bar:after {
+	content: '';
+	position: absolute;
+	right: -35px;
+	z-index: 1;
+	border: 15px solid transparent;
+	border-left-width: 20px;
+}
+.process > .progress > .progress-bar-danger:after {
+	border-left-color: #d9534f;
+}
+.process > .progress > .progress-bar-warning:after {
+	border-left-color: #f0ad4e;
+}
+.process > .progress > .progress-bar-info:after {
+	border-left-color: #5bc0de;
+}
+.process > .progress > .progress-bar-success:after {
+	border-left-color: #5cb85c;
+} */

@@ -1,0 +1,83 @@
+*{
+    -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+            box-sizing: border-box;
+			
+}
+body{
+	overflow-x:hidden;
+   
+}
+.wrapper{
+	max-width: 1920px;
+    height: 700px;
+	
+	/* 兼容小屏幕的居中 */
+	position:relative;
+	left:50%;
+	margin-left:-960px; /* 这里设置成宽度的一半 */
+}
+.header1{
+	height: 90px; 
+    width: 1920px;
+    position: relative;
+    background-color: greenyellow; 
+}
+.xinxi{
+	position:relative;
+	width:1100px;
+	height:600px;
+	margin:0 auto;
+	/* <background-color: id="afb0b1"></background-color:> */
+}
+#tiaok{
+	position:absolute;
+	width:1100px;
+	height:360px;
+	/* <background-color: id="2a98d1"></background-color:> */
+}
+#tiaok table{
+	position:relative;
+	top:50px;
+	margin:0 auto;
+}
+#tiaok caption{
+	font-size:30px;
+	text-align:center;
+}
+#tiaok td{
+	width:600px;
+	height:50px;
+	text-align:left;
+}
+#tiaok input{
+	float:right;
+	
+	width:25px;
+	height:25px;
+}
+.span1{
+	font-size:25px;
+	float:right;
+	margin:0 5px;
+}
+#xinxi1{
+	height:600px;
+	background-color:#d5ec68;
+}
+#xinxi1 form{
+	position:relative;
+	top:60px;
+	left:400px;
+}
+.in{
+	display:block;
+}
+.in span{
+	font-size:22px;
+}
+.in input{
+	
+	width:300px;
+	height:40px;
+}

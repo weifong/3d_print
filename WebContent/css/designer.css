@@ -1,0 +1,189 @@
+/* 进度条样式 */
+.process > h2{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	font-size: 24px;
+	margin: 0;
+}
+.process > .onekey{
+	height: 30px;
+	float: right;
+	margin-left: 5px;
+	padding-top: 3px;
+}
+.process > .progress{
+	height: 30px;
+}
+.process > .progress > .progress-bar {
+	font-size: 16px;
+	line-height: 30px;
+	text-indent: 10px;
+	width: 25%;
+	position: relative;
+}
+.process > .progress > .progress-bar:after {
+	content: '';
+	position: absolute;
+	right: -35px;
+	z-index: 1;
+	border: 15px solid transparent;
+	border-left-width: 20px;
+}
+.process > .progress > .progress-bar-danger:after {
+	border-left-color: #d9534f;
+}
+.process > .progress > .progress-bar-warning:after {
+	border-left-color: #f0ad4e;
+}
+.process > .progress > .progress-bar-info:after {
+	border-left-color: #5bc0de;
+}
+.process > .progress > .progress-bar-success:after {
+	border-left-color: #5cb85c;
+} 
+
+
+/* 设计师列表 */
+.designers {
+	margin-top: 30px;
+}
+/* 主标题 */
+.designers > .title_lg{
+	margin-top: 0;
+	margin-left: -8px;
+	float: left;
+}
+/* 排序方式 */
+.designers .sortby{
+	float: right;
+}
+/* 列表 */
+.designers > ul{
+	clear: both;
+}
+.designers > ul > li {
+	padding: 0 5px;
+	position: relative;
+}
+/* 去掉下划线 */
+.designers > ul > li > a {
+	height: 400px;
+	margin-bottom: 0;
+	text-decoration: none;
+}
+
+/* 信息 */
+.designers .info{
+	position: absolute;
+	left:   10px;
+	right:  10px;
+	bottom: 46px;
+	overflow: hidden;
+}
+/* 简介 */
+.designers .info .brief{
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 5px 0 5px 20px;
+}
+/* 名称 */
+.designers .info .brief > h3{
+	font-size: 16px;
+	margin: 5px 0;
+}
+/* 年龄 */
+.designers .info .brief > span {
+	font-size: 12px;
+}
+/* 作品 */
+.designers .info .works {
+	/*height: 70px;*/
+	height: 0;
+	overflow: hidden;
+}
+.designers .info .works > a {
+	display: block;
+	float: left;
+	padding: 0 1px;
+	margin-top: 5px;
+	width: 33.3%;
+}
+.designers .info .works > a >img {
+	width: 100%;
+}
+/* 底部栏 */
+.designers > ul > li .footer {
+	color: #939393;
+	background-color: #f1f1f1;
+	border-radius: 0 0 4px 4px;
+	height: 40px;
+	position: absolute;
+	left: 6px;
+	right: 6px;
+	bottom: 1px;
+	overflow: hidden;
+}
+.designers > ul > li .footer > div {
+	height: 25px;
+	margin-top: 7px;
+	border-right: 1px #e2e2e2 solid;
+	padding: 0 5px;
+	text-align: center;
+}
+.designers > ul > li .footer > div:last-child {
+	border-right: none;
+}
+.designers > ul > li .footer > div > .badge {
+	font-weight: normal;
+	background-color: #aaa;
+}
+/* 加关注 */
+.attention:hover{
+	color: #6cc04e;
+}
+
+/* 设计师 分页 */
+.designers > nav {
+	line-height: 55px;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+.designers > nav > div {
+	overflow: hidden;
+	width: 560px;
+	margin: 0 auto;
+}
+.designers > nav .pagination {
+	float: left;
+}
+.designers > nav .target {
+	width: 50px;
+}
+
+/* 设计师作品展示 */
+/* 主标题 */
+.goodworks > .title_lg{
+	margin-top: 0;
+	margin-left: -8px;
+	float: left;
+}
+/* 排序方式 */
+.goodworks .classify{
+	float: right;
+}
+/* 列表 */
+.goodworks_list {
+	clear: both;
+}
+.goodworks_list > li .thumbnail >img {
+	width: 100%;
+}
+.goodworks_list > li .caption > a {
+	color: #353535;
+	font-size: 16px;
+	text-decoration: none;
+}
+.goodworks_list > li .caption > .price {
+	font-size: 16px;
+}

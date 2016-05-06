@@ -1,0 +1,91 @@
+/* 图片轮播 */
+
+/* 去掉内边距和列表样式 */
+.pic_big,
+.pic_sm{
+	list-style: none;
+	padding: 0;
+}
+
+/* 大图部分 */
+.pic_big {
+	margin: 0;
+	margin-left: 15px;
+}
+.pic_big > li
+{
+	position: absolute;
+}
+
+.pic_big > li > a > img
+{
+	width: 100%;
+}
+
+/* 缩略图部分 */
+.pic_sm {
+	width: 20.6%;
+	margin-left: 20px;
+}
+.pic_sm > li {
+	margin-top: 5px;
+}
+.pic_sm > li:first-child {
+	margin-top: 0;
+}
+.pic_sm > li > a > img {
+	width: 100%;
+	opacity: 0.5;
+}
+.pic_sm > li.active > a > img,
+.pic_sm > li:hover > a > img {
+	opacity: 1;
+}
+
+
+/* 模型列表 */
+.model_list_container {
+	margin-top: 20px;
+}
+/* 一行 */
+.model_list_container > ul {
+
+}
+/* 列表 */
+.model_list_container > ul > li {
+	padding: 0 5px;
+}
+/* 标题 */
+.model_list_container > ul > li .caption h3 {
+	margin: 0;
+	font-size: 16px;
+	text-align: center;
+}
+.model_list_container > ul > li:hover .caption h3 {
+	color: #007fff;
+}
+.model_list_container > ul > li .caption .item {
+	border-top: solid #ddd 1px;
+}
+/* 底部栏 */
+.model_list_container > ul > li .footer {
+	color: #939393;
+	background-color: #f1f1f1;
+	border-radius: 0 0 4px 4px;
+	height: 40px;
+	margin: 0 -4px -4px -4px;
+	overflow: hidden;
+}
+.model_list_container > ul > li .footer > div {
+	height: 25px;
+	margin-top: 7px;
+	border-right: 1px #e2e2e2 solid;
+	padding: 0 5px;
+}
+.model_list_container > ul > li .footer > div:last-child {
+	border-right: none;
+}
+.model_list_container > ul > li .footer > div > .badge {
+	font-weight: normal;
+	background-color: #aaa;
+}

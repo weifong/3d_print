@@ -1,0 +1,115 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-3-2, 3:02:38
+    Author     : Administrator
+*/
+*{
+    -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+            box-sizing: border-box;
+			
+}
+body{
+	overflow-x:hidden;
+    background-color: aquamarine;
+}
+.wrapper{
+ max-width: 1920px;
+    height: 910px;
+	
+	/* 兼容小屏幕的居中 */
+	position:relative;
+	left:50%;
+	margin-left:-960px; /* 这里设置成宽度的一半 */
+}
+.head {
+    height: 44px; 
+    width: 1920px;
+    position: relative;
+    background-color: greenyellow; 
+    
+}
+
+#top{
+    top:2px;
+    width: 400px;
+    position: absolute;
+    right: 0px;
+}
+ul.head1{
+   position: absolute;
+    display: block;
+    list-style:none ;
+   
+}
+    ul.head1 li{
+    
+    display: inline ;
+    }
+    ul.head1 li a{
+		height:20px;
+        display: inline-block;
+        width: 60px;
+    }
+	.prompt{
+		width:1920px;
+		height:70px;
+		background-color:green;
+	}
+	.pro{
+			
+			display:block;
+			height:70px;
+			font-size:20px;
+			text-align:center;
+		} 
+    .picture{
+		position:relative;
+        width: 768px;
+        height: 600px;
+        background-color: #e2dede;
+    }
+	.pic{
+		width:90px;
+		position:relative;
+		left:50px;
+		top:30px;
+	}
+	.register{
+		position: absolute;
+		top: 189px;
+        right: 0;
+        width: 1152px;
+        height: 600px;
+        background-color: buttonface;
+	}
+	.myform{
+		position:relative;
+		left:150px;
+		top:30px;
+	}
+	.submit{
+		width:320px;
+		height:40px;
+		position:absolute;
+		left:80px;
+		top:500px;
+		
+	}
+	.in{
+		display:block;
+		padding-top:5px;
+		padding-bottom:5px;
+	}
+	.in.title{
+	font-size:30px;
+	display: inline-block;
+	}
+	.in input{
+		width:500px;
+		height:36px;
+		}

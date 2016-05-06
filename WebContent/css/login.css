@@ -1,0 +1,120 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-3-2, 3:02:38
+    Author     : Administrator
+*/
+*{
+    -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+            box-sizing: border-box;
+			
+}
+body{
+    
+   
+	overflow-x:hidden;
+    background-color: aquamarine;
+}
+.wrapper{
+ max-width: 1920px;
+    height: 910px;
+	width:1920px;
+	/* 兼容小屏幕的居中 */
+	position:relative;
+	left:50%;
+	margin-left:-960px; /* 这里设置成宽度的一半 */
+}
+.head {
+    height: 44px; 
+    width: 1920px;
+    position: relative;
+    background-color: greenyellow; 
+    
+}
+.form-search{
+   
+}
+
+#top{
+    top:2px;
+    width: 400px;
+    position: absolute;
+    right: 0px;
+}
+ul.head1{
+   position: absolute;
+    display: block;
+    list-style:none ;
+   
+}
+    ul.head1 li{
+    
+    display: inline ;
+    }
+    ul.head1 li a{
+		height:30px;
+        display: inline-block;
+        width: 66px;
+    }
+    .picture{
+       position:relative;
+        width: 768px;
+        height: 500px;
+        background-color: #e2dede;
+    }
+	.pic{
+		width:90px;
+		
+		position:relative;
+		left:50px;
+		top:30px;
+	}
+/* 	img{
+		position:absolute;
+		top:0px;
+		left:210px;
+	} */
+	
+    .longin{
+        position: absolute;
+       top: 138.7px;
+        right: 0;
+        width: 1152px;
+        height: 500px;
+        background-color: buttonface;
+    }
+    .loginform{
+        width: 500px;
+        margin: 100px auto 0 auto;
+    }
+    .loginform fieldset{
+        padding: 20px;
+		
+    }
+    .we{
+        font-family: STCaiyun;
+        font-size: 40px;
+		
+		
+    }
+  .ln {
+	display:block;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.ln .title {
+     font-size:30px;
+	display: inline-block;
+	width: 100px;
+}
+.submit{
+    position: relative;
+	top:40px;
+    left: 150px;
+    width:100px;
+    height:30px;
+}

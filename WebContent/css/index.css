@@ -1,0 +1,144 @@
+*{
+    -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+            box-sizing: border-box;
+			
+}
+body{
+	overflow-x:hidden;
+   /*  background-color: #80e1ea; */
+}
+.wrapper{
+	max-width: 1920px;
+    height: 2100px;
+	
+	/* 兼容小屏幕的居中 */
+	position:relative;
+	left:50%;
+	margin-left:-960px; /* 这里设置成宽度的一半 */
+}
+
+.case{
+	position:relative;
+	width:1920px;
+	height:900px;
+	/* background-color: #80e1ea; */
+	/* #a4e960; */
+}
+.art1{
+	position:relative;
+	left:600px;
+	top:70px;
+	width:500px; */
+	height:200px;
+	/* <background-color: id="a9e474"></background-color:> */
+}
+.case a:link,.case a:visited
+{
+	display:block;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#8fdfc4;
+	width:120px;
+	text-align:center;
+	padding:4px;
+	text-decoration:none;
+}
+.case a:hover,.case a:active
+{
+background-color:#3431c0;
+}
+.case2{
+	position:relative;
+	left:150px;
+	font-family:Microsoft YaHei;
+	font-size:50px;
+}
+.case1{
+	font-size:35px;
+}
+#Industry{
+	position:relative;
+	top:80px;
+	left:116px;
+	width:1700px;
+	height:300px;
+	
+}
+#Industry a{
+	display:block;
+	width:400px;
+	height:300px;
+	float:left;
+	margin:0 10px ;
+	
+}
+ #Industry a img{
+			width:100%;
+			height:100%;
+			
+		}
+#Industry a:hover img{
+	-webkit-transform: scale(1.06);
+}
+.describe{
+	
+	height:450px;
+/* 	background-color:#e5b6b6; */
+}
+
+#medical{
+	position:absolute;
+	top:280px;
+	left:116px;
+	width:1700px;
+	height:300px;
+	
+}
+#medical a{
+	display:block;
+	width:400px;
+	height:300px;
+	float:left;
+	margin:0 10px ;
+	
+}
+ #medical a img{
+			width:100%;
+			height:100%;			
+		}
+ #medical a:hover img{
+	-webkit-transform: scale(1.06);
+	-zos-transform: scale(1.06);
+	-o-transform: scale(1.06);
+	transform: scale(1.06);
+}	
+#Industry a:hover img{
+	-webkit-transform: scale(1.06);
+	-zos-transform: scale(1.06);
+	-o-transform: scale(1.06);
+	transform: scale(1.06);
+}
+#image{
+	position:absolute;
+	top:271px;
+	left:118px;
+}
+
+.tab{
+	/* position:relative;
+	left:500px; */
+	margin:0 auto;
+}
+.tab caption{
+	text-align:center;
+	font-size:40px;
+}
+.tab td{
+	width:300px;
+	height:360px;
+	background-color:#EAF2D3;
+}
+.designers {
+	margin-top: 30px;
+}
