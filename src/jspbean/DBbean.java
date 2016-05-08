@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class DBbean 
 {
     private String m_strDbdriver="com.mysql.jdbc.Driver";
-    private String m_strDataBaseUrl="jdbc:mysql://localhost:3306/3dtest";
+    private String m_strDataBaseUrl="jdbc:mysql://localhost:3306/3dtest?characterEncoding=utf8";
     private String m_strUserId="root";
     private String m_strUserPassword="123456";
     private Connection m_pCon=null;

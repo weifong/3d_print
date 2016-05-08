@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>3D_Print</display-name>
   <welcome-file-list>
-    <welcome-file>login.jsp</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
     <description></description>
@@ -23,5 +23,35 @@
   <servlet-mapping>
     <servlet-name>Model_sub</servlet-name>
     <url-pattern>/Model_sub</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpComment</display-name>
+    <servlet-name>UpComment</servlet-name>
+    <servlet-class>myServerlet.UpComment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpComment</servlet-name>
+    <url-pattern>/UpComment</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AttentionServlet</display-name>
+    <servlet-name>AttentionServlet</servlet-name>
+    <servlet-class>myServerlet.AttentionServlet</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>AttentionServlet</servlet-name>
+    <url-pattern>/AttentionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  <description></description>
+  <display-name>uploadServlet</display-name>
+  <servlet-name>uploadServlet</servlet-name>
+  <servlet-class>myServerlet.uploadServlet</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>uploadServlet</servlet-name>
+    <url-pattern>/uploadServlet</url-pattern>
   </servlet-mapping>
 </web-app>

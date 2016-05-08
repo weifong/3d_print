@@ -1,17 +1,24 @@
+<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <!DOCTYPE HTML>
 <html lang="zh">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/shoushudaoban.css"/>
-	<!-- <script src="bootstrap-3.3.6-dist/js/jquery-1.8.2.min.js" ></script> -->
+	<link rel="stylesheet" href="css/ruzhuxinxi.css" />
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/scale.js"></script>
-	<title>手术导板定制</title>
-
-
+	<title> 加盟条款</title>
+	<script type="text/javascript">
+		function a_click(v){
+			var list = $(".h");
+			list.filter(":not(:hidden)").attr("hidden", "");
+			list.eq(v).removeAttr("hidden");
+		
+		}
+	</script>
+	
 	<link rel="stylesheet" href="css/common.css"/>
 	<script src="js/common.js"></script>
 </head>
@@ -21,7 +28,7 @@
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
-				<a href="index.jsp">
+				<a href="index.html">
 					 <img alt="Brand" src="images/logo.png" height="50px">
 				</a>
 			</div>
@@ -32,12 +39,12 @@
 					<li class="nav_first">
 						<a href="#">定制</a>
 						<ul class="dropdown-menu">
-							<li class="active"><a>手术导板定制</a></li>
+							<li><a href="shoushudaoban.html">手术导板定制</a></li>
                             <li><a href="gongyedingzhi.html">工业/个性化定制</a></li>
 				        </ul>
 			        </li>
 					<li><a href="model.jsp">模型库</a></li>
-					<li><a href="designer.jsp">设计师</a></li>
+					<li><a href="designer.html">设计师</a></li>
 					<li><a href="join.html">加盟/入驻</a></li>
 					<li><a href="shangcheng.html">商城</a></li>
                     <li><a href="dingdanguanli.html">我的订单</a></li>
@@ -82,75 +89,55 @@
 			<li><a id="btn_to_top"><br />顶部</a></li>
 		</ul>
 	</div>
-
-	<div class="wrapper beginContent">
-		<section class="process"><!-- 流程 -->
-			<div class="process1">
-				<a href=""> <span>上传CT </span></a>
-				<img src="img/jiantou.png" alt="箭头" />
-				<a href=""> <span>支付定金</span></a>
-				<img src="img/jiantou.png" alt="箭头" />
-				<a href=""> <span>设计建模 </span></a>
-				<img src="img/jiantou.png" alt="箭头" />
-				<a href=""> <span>确认方案 </span></a>
-				<img src="img/jiantou.png" alt="箭头" />
-				<a href=""> <span>付款打印</span></a>
-
+	<div style="height:100px"></div>
+	<div class="wrapper">
+		<section class="xinxi">
+			
+			 <div id="xinxi1" class="h" hidden="true" ><!---->
+				<form action="" >
+					<label for="" class="in">
+						<p><span >企业营业执照</span></p>
+						<input type="text" />
+					</label>	
+					<label for=""class="in">
+						<p><span>企业所在地址</span></p>
+						<input type="text" />
+					</label>
+					<label for="" class="in">
+						<p><span> 企业法人身份证</span></p>
+						<input type="text" />
+					</label>	
+					<label for="" class="in">
+						<p><span> 代理人身份证</span></p>
+						<input type="text" />
+					</label>
+					<label for="" class="in">
+						<p><span> 设备或材料照片</span></p>
+						<input type="file" />
+					</label>
+					<input type="submit" style="width:50px;height:30px;" value="提交" />
+				</form>
 			</div>
-		</section>
-		<section class="upload">
-			<div style="height:50px;width:1920px;background-color:#3b9dd6"></div>
-			<div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel"style="width:600px;height:500px;position:relative;top=60px;left:370px">
-		   <!-- 轮播（Carousel）指标 --><!-- 图片大小598*500 -->
-				   <ol class="carousel-indicators">
-					  <li data-target="#myCarousel" data-slide-to="0" class="active" style=""></li>
-					  <li data-target="#myCarousel" data-slide-to="1"></li>
-					  <li data-target="#myCarousel" data-slide-to="2"></li>
-				   </ol>
-				   <!-- 轮播（Carousel）项目 -->
-				   <div  class="carousel-inner" style="width:600px;height:500px;position: relative;top=60px;">
-					  <div class="item active">
-						 <img src="img/shoushu2.png" alt="First slide">
-						 <div class="carousel-caption">标题 1</div>
-					  </div>
-					  <div class="item">
-						 <img src="img/shoushu1.png" alt="Second slide">
-						 <div class="carousel-caption">标题 2</div>
-					  </div>
-					  <div class="item">
-						 <img src="img/shoushu2.png" alt="Third slide">
-						 <div class="carousel-caption">标题 3</div>
-					  </div>
-				   </div>
-				   <!-- 轮播（Carousel）导航 -->
-				   <a class="carousel-control left" href="#myCarousel"
-					  data-slide="prev" >&lsaquo;</a>
-				   <a class="carousel-control right" href="#myCarousel"
-					  data-slide="next">&rsaquo;</a>
-			</div>
-			<div class="kefu">
-				<table border="0">
+			<div id="tiaok" class="h" >
+				<table border="1">
+					<caption>是否同意以下条款</caption>
 					<tr>
-						<td>
-							打印手术导板？<br/>点击联系客服，与专业设计师交流
-						</td>
+						<td>1.条款</td>
 					</tr>
-				</table>
-				<a href="" class="a1"> <span style="font-size:35px;">联系客服</span></a>
+					<tr>
+						<td>2.条款</td>
+					</tr>
+					<tr>
+						<td>3.条款</td>
+					</tr>
+					<tr>
+						<td>4.条款</td>
+					</tr>
+				</table><br /><br />
+				<span class="span1">同意</span><input type="checkbox" onclick="a_click(0)"/>
 			</div>
-			<form action="" >
-				<label for="" class="lab">
-					<br /><br />
-					<span style="font-size:25px;">已经确定手术方案？直接上传文件，进行打印吧</span>
-					<br/><br/><br/>
-					<input type="file"  name="file" value="选择文件" style="width:90px;height:40px;font-size:22px;display:inline;position:relative;left:120px;"/>
-					<input type="submit" value="上传"style="width:120px;height:40px;font-size:23px; position:relative;left:180px;">
-				</label>
-			</form>
 		</section>
 	</div>
-
-
 	<!-- 底部 -->
 	<footer class="section section-primary">
 		<div class="container">

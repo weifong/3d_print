@@ -1,27 +1,43 @@
+<%@ page language="java" pageEncoding="utf-8" %> 
+<%@ page contentType="text/html;charset=utf-8"%> 
+<%@include file="Parameter.jsp" %>
+
 <!DOCTYPE HTML>
-<html lang="zh">
+<html lang="en-US">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/shoushudaoban.css"/>
-	<!-- <script src="bootstrap-3.3.6-dist/js/jquery-1.8.2.min.js" ></script> -->
+	<link rel="stylesheet" href="css/index.css" />
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/scale.js"></script>
-	<title>手术导板定制</title>
-
+	<!--<script src="js/scale.js"></script>-->
+	<title> 首页 </title>
+	<script type="text/javascript">
+		function a_click(v){
+			var list = $(".img");
+			list.filter(":not(:hidden)").attr("hidden", "");
+			list.eq(v).removeAttr("hidden");
+		}
+	</script>
 
 	<link rel="stylesheet" href="css/common.css"/>
 	<script src="js/common.js"></script>
 </head>
+<%
+if(null == session.getAttribute("user_id"))
+{
+	session.setAttribute("user_id", "");
+}
+%>
 <body>
+<input type="hidden" id="userid" value="null"/>
 	<!-- 导航栏 -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
-				<a href="index.jsp">
+				<a>
 					 <img alt="Brand" src="images/logo.png" height="50px">
 				</a>
 			</div>
@@ -32,7 +48,7 @@
 					<li class="nav_first">
 						<a href="#">定制</a>
 						<ul class="dropdown-menu">
-							<li class="active"><a>手术导板定制</a></li>
+							<li><a href="shoushudaoban.html">手术导板定制</a></li>
                             <li><a href="gongyedingzhi.html">工业/个性化定制</a></li>
 				        </ul>
 			        </li>
@@ -84,76 +100,83 @@
 	</div>
 
 	<div class="wrapper beginContent">
-		<section class="process"><!-- 流程 -->
-			<div class="process1">
-				<a href=""> <span>上传CT </span></a>
-				<img src="img/jiantou.png" alt="箭头" />
-				<a href=""> <span>支付定金</span></a>
-				<img src="img/jiantou.png" alt="箭头" />
-				<a href=""> <span>设计建模 </span></a>
-				<img src="img/jiantou.png" alt="箭头" />
-				<a href=""> <span>确认方案 </span></a>
-				<img src="img/jiantou.png" alt="箭头" />
-				<a href=""> <span>付款打印</span></a>
-
-			</div>
+		<div style="height:50px;"></div>
+		<div id="myCarousel" class="carousel slide"   style="width:1450px;height:505px;margin:0 auto;">
+		   <!-- 轮播（Carousel）指标 -->
+		   <ol class="carousel-indicators">
+			  <li data-target="#myCarousel" data-slide-to="0" class="active" style=""></li>
+			  <li data-target="#myCarousel" data-slide-to="1"></li>
+			  <li data-target="#myCarousel" data-slide-to="2"></li>
+		   </ol>   
+		   <!-- 轮播（Carousel）项目 -->
+		   <div class="carousel-inner" data-interval="4000" data-ride="carousel" style="width:1450px;height:505px;">
+			  <div class="item active">
+				 <img src="img/shouye2.jpg" alt="First slide">
+				 <div class="carousel-caption">标题 1</div>
+			  </div>
+			  <div class="item">
+				 <img src="img/shouye1.jpg" alt="Second slide">
+				 <div class="carousel-caption">标题 2</div>
+			  </div>
+			  <div class="item">
+				 <img src="img/shouye3.jpg" alt="Third slide">
+				 <div class="carousel-caption">标题 3</div>
+			  </div>
+		   </div>
+		   <!-- 轮播（Carousel）导航 -->
+		   <a class="carousel-control left" href="#myCarousel" 
+			  data-slide="prev" >&lsaquo;</a>
+		   <a class="carousel-control right" href="#myCarousel" 
+			  data-slide="next">&rsaquo;</a>
+		</div>  
+		<section class="case ">
+				<article class="art1">
+					<span class="case2">成功案例</span>
+					<a  href=""style="position:relative;top:40px;left:100px;" onMouseMove="a_click(0)"><span class="case1"  >工业<span></a>
+					<a  href="" style="position:relative;top:-16px;left:280px;"><span class="case1 " onMouseMove="a_click(1)" >医疗<span></a>
+				</article>
+			<article id="Industry" class="img">
+				<a href=""><img src="img/shangcheng2.jpg" alt="工业" /> </a>
+				<a href="" ><img src="img/shangcheng3.jpeg" alt="工业" /> </a>
+				<a href="" ><img src="img/shangcheng4.jpg" alt="工业" /> </a>
+				<a href="" ><img src="img/shangcheng2.jpg" alt="工业" /> </a>
+				<a href=""><img src="img/shangcheng2.jpg" alt="工业" /> </a>
+				<a href="" ><img src="img/shangcheng3.jpeg" alt="工业" /> </a>
+				<a href="" ><img src="img/shangcheng4.jpg" alt="工业" /> </a>
+				<a href="" ><img src="img/shangcheng2.jpg" alt="工业" /> </a>
+			</article>
+			<article id="medical" class="img">
+				<a href="" ><img src="img/shangcheng4.jpg" alt="工业" /> </a>
+				<a href=""><img src="img/shangcheng2.jpg" alt="工业" /> </a>
+				<a href="" ><img src="img/shangcheng3.jpeg" alt="工业" /> </a>
+				<a href="" ><img src="img/shangcheng4.jpg" alt="工业" /> </a>
+				<a href="" ><img src="img/shangcheng4.jpg" alt="工业" /> </a>
+				<a href=""><img src="img/shangcheng2.jpg" alt="工业" /> </a>
+				<a href="" ><img src="img/shangcheng3.jpeg" alt="工业" /> </a>
+				<a href="" ><img src="img/shangcheng4.jpg" alt="工业" /> </a>
+			</article> 
+			<img src="img/shouye.jpg" id="image"  class="img">
 		</section>
-		<section class="upload">
-			<div style="height:50px;width:1920px;background-color:#3b9dd6"></div>
-			<div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel"style="width:600px;height:500px;position:relative;top=60px;left:370px">
-		   <!-- 轮播（Carousel）指标 --><!-- 图片大小598*500 -->
-				   <ol class="carousel-indicators">
-					  <li data-target="#myCarousel" data-slide-to="0" class="active" style=""></li>
-					  <li data-target="#myCarousel" data-slide-to="1"></li>
-					  <li data-target="#myCarousel" data-slide-to="2"></li>
-				   </ol>
-				   <!-- 轮播（Carousel）项目 -->
-				   <div  class="carousel-inner" style="width:600px;height:500px;position: relative;top=60px;">
-					  <div class="item active">
-						 <img src="img/shoushu2.png" alt="First slide">
-						 <div class="carousel-caption">标题 1</div>
-					  </div>
-					  <div class="item">
-						 <img src="img/shoushu1.png" alt="Second slide">
-						 <div class="carousel-caption">标题 2</div>
-					  </div>
-					  <div class="item">
-						 <img src="img/shoushu2.png" alt="Third slide">
-						 <div class="carousel-caption">标题 3</div>
-					  </div>
-				   </div>
-				   <!-- 轮播（Carousel）导航 -->
-				   <a class="carousel-control left" href="#myCarousel"
-					  data-slide="prev" >&lsaquo;</a>
-				   <a class="carousel-control right" href="#myCarousel"
-					  data-slide="next">&rsaquo;</a>
-			</div>
-			<div class="kefu">
-				<table border="0">
-					<tr>
-						<td>
-							打印手术导板？<br/>点击联系客服，与专业设计师交流
-						</td>
-					</tr>
-				</table>
-				<a href="" class="a1"> <span style="font-size:35px;">联系客服</span></a>
-			</div>
-			<form action="" >
-				<label for="" class="lab">
-					<br /><br />
-					<span style="font-size:25px;">已经确定手术方案？直接上传文件，进行打印吧</span>
-					<br/><br/><br/>
-					<input type="file"  name="file" value="选择文件" style="width:90px;height:40px;font-size:22px;display:inline;position:relative;left:120px;"/>
-					<input type="submit" value="上传"style="width:120px;height:40px;font-size:23px; position:relative;left:180px;">
-				</label>
-			</form>
+		<section class="describe wrap">
+			<table border="1" class="tab">
+				<caption> 3D打印优势</caption>
+				<tr>
+					<td>
+					</td>
+					<td>
+					</td>
+					<td>
+					</td>
+				</tr>
+				
+			</table>
 		</section>
 	</div>
 
 
 	<!-- 底部 -->
 	<footer class="section section-primary">
-		<div class="container">
+		<div class="container wrap">
 			<ul class="row list-unstyled footer_top_list">
 				<li class="col-lg-2">
 					<h2><span class="glyphicon glyphicon-book"></span> 设计指南</h2>

@@ -110,7 +110,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t<div class=\"container-fluid\">\r\n");
       out.write("\t\t\t<!-- Brand and toggle get grouped for better mobile display -->\r\n");
       out.write("\t\t\t<div class=\"navbar-header\">\r\n");
-      out.write("\t\t\t\t<a href=\"index.html\">\r\n");
+      out.write("\t\t\t\t<a href=\"index.jsp\">\r\n");
       out.write("\t\t\t\t\t <img alt=\"Brand\" src=\"images/logo.png\" height=\"50px\">\r\n");
       out.write("\t\t\t\t</a>\r\n");
       out.write("\t\t\t</div>\r\n");
@@ -125,7 +125,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t        </ul>\r\n");
       out.write("\t\t\t        </li>\r\n");
       out.write("\t\t\t\t\t<li><a href=\"model.jsp\">模型库</a></li>\r\n");
-      out.write("\t\t\t\t\t<li><a href=\"designer.html\">设计师</a></li>\r\n");
+      out.write("\t\t\t\t\t<li><a href=\"designer.jsp\">设计师</a></li>\r\n");
       out.write("\t\t\t\t\t<li><a href=\"join.html\">加盟/入驻</a></li>\r\n");
       out.write("\t\t\t\t\t<li><a href=\"shangcheng.html\">商城</a></li>\r\n");
       out.write("\t\t\t\t</ul>\r\n");
@@ -175,7 +175,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t<div style=\"height: 139px\"></div>\r\n");
       out.write("    <section class=\"picture\">\r\n");
       out.write("\t\t<div class=\"pic\">\r\n");
-      out.write("\t\t<a href=\"index.html\" ><font size=\"4\"> 首页</font> </a>\r\n");
+      out.write("\t\t<a href=\"index.jsp\" ><font size=\"4\"> 首页</font> </a>\r\n");
       out.write("\t\t/\r\n");
       out.write("\t\t <font size=\"4\"> 登录</font>\r\n");
       out.write("\t\t</div> \r\n");

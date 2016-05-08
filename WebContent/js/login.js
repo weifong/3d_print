@@ -2,12 +2,12 @@ function for_login()
 {
 	if(loginForm.username.value==""||loginForm.password.value=="")
 	{
-		alert("用户名或密码不能为空");
-		return;
+		window.alert("用户名或密码不能为空");
+		return false;
 	}
 	else
 		{
-		loginForm.submit();
+		return true;	
 		}
 		
 } 

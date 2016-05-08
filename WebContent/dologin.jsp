@@ -55,5 +55,5 @@
             e.printStackTrace();
         }    
     }
-    response.sendRedirect("designer.html");
+    response.sendRedirect("designer.jsp");
     	%>

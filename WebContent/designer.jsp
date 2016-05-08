@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@ page language="java" pageEncoding="utf-8" import="java.sql.ResultSet" %>
-<%@ page contentype="text/html;charset="utf-8" %>
+<%@ page contentType="text/html;charset=utf-8"%> 
 <%@ include file="Parameter.jsp" %>
 <head>
 	<meta charset="UTF-8">
@@ -22,7 +22,7 @@
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
-				<a href="index.html">
+				<a href="index.jsp">
 					 <img alt="Brand" src="images/logo.png" height="50px">
 				</a>
 			</div>
@@ -116,12 +116,29 @@
 			</div>
 			
 			<ul class="list-unstyled row">
+			<%
+			String strSql="select * from designer,userinfo where designer.userid=userinfo.id;";			
+			ResultSet rs=DataBaseBean.querySql(strSql);
+			String strBeginType=null;
+
+			while(rs.next())
+			{
+				int iId=rs.getInt("id");
+				int ifanscount=rs.getInt("fanscount");
+				int imodelcount=rs.getInt("modelcount");
+				int iattentioncount=rs.getInt("attentioncount");
+				int iintegral=rs.getInt("integral");
+				String strshowlogo=rs.getString("showlogo");
+				String strName=rs.getString("name");
+				String strSex=rs.getString("sex");
+			%>
+			
 				<li class="col-md-4 col-lg-2dot4">
 					<div class="info">
 						<!-- 简介 -->
 						<div class="brief">
-							<h3>WallTosh</h3>
-							<span>28</span>
+							<h3><%=strName %></h3>
+							<span><%=strSex %></span>
 						</div>
 						<!-- 作品 -->
 						<div class="works">
@@ -130,371 +147,19 @@
 							<a href="#"><img src="testImg/test_designer_work_3.jpg" alt="" /></a>
 						</div>
 					</div>
-					<a class="thumbnail" href="#">
+					<a class="thumbnail" href="shejishiyemian.jsp?<%=strshowlogo+"@"+iintegral+"@"+iId%>">
 						<!-- 大图 -->
-						<img src="testImg/test_designer.jpg" alt="...">
+						<img src="<%=strshowlogo %>" alt="...">
 						<!-- 底部 -->
 						<div class="footer">
-							<div class="col-lg-4">粉丝 <span class="badge">10</span></div>
-							<div class="col-lg-4">产品 <span class="badge">6</span></div>
-							<div class="col-lg-4 attention">关注 <span class="badge">4</span></div>
+							<div class="col-lg-4">粉丝 <span class="badge"><%=ifanscount %></span></div>
+							<div class="col-lg-4">产品 <span class="badge"><%=imodelcount %></span></div>
+							<div class="col-lg-4 attention">关注 <span class="badge"><%=iattentioncount %></span></div>
 						</div>
 					</a>
 				</li>
-				<li class="col-md-4 col-lg-2dot4">
-					<div class="info">
-						<!-- 简介 -->
-						<div class="brief">
-							<h3>WallTosh</h3>
-							<span>28</span>
-						</div>
-						<!-- 作品 -->
-						<div class="works">
-							<a href="#"><img src="testImg/test_designer_work_1.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_2.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_3.jpg" alt="" /></a>
-						</div>
-					</div>
-					<a class="thumbnail" href="#">
-						<!-- 大图 -->
-						<img src="testImg/test_designer.jpg" alt="...">
-						<!-- 底部 -->
-						<div class="footer">
-							<div class="col-lg-4">粉丝 <span class="badge">10</span></div>
-							<div class="col-lg-4">产品 <span class="badge">6</span></div>
-							<div class="col-lg-4 attention">关注 <span class="badge">4</span></div>
-						</div>
-					</a>
-				</li>
-				<li class="col-md-4 col-lg-2dot4">
-					<div class="info">
-						<!-- 简介 -->
-						<div class="brief">
-							<h3>WallTosh</h3>
-							<span>28</span>
-						</div>
-						<!-- 作品 -->
-						<div class="works">
-							<a href="#"><img src="testImg/test_designer_work_1.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_2.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_3.jpg" alt="" /></a>
-						</div>
-					</div>
-					<a class="thumbnail" href="#">
-						<!-- 大图 -->
-						<img src="testImg/test_designer.jpg" alt="...">
-						<!-- 底部 -->
-						<div class="footer">
-							<div class="col-lg-4">粉丝 <span class="badge">10</span></div>
-							<div class="col-lg-4">产品 <span class="badge">6</span></div>
-							<div class="col-lg-4 attention">关注 <span class="badge">4</span></div>
-						</div>
-					</a>
-				</li>
-				<li class="col-md-4 col-lg-2dot4">
-					<div class="info">
-						<!-- 简介 -->
-						<div class="brief">
-							<h3>WallTosh</h3>
-							<span>28</span>
-						</div>
-						<!-- 作品 -->
-						<div class="works">
-							<a href="#"><img src="testImg/test_designer_work_1.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_2.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_3.jpg" alt="" /></a>
-						</div>
-					</div>
-					<a class="thumbnail" href="#">
-						<!-- 大图 -->
-						<img src="testImg/test_designer.jpg" alt="...">
-						<!-- 底部 -->
-						<div class="footer">
-							<div class="col-lg-4">粉丝 <span class="badge">10</span></div>
-							<div class="col-lg-4">产品 <span class="badge">6</span></div>
-							<div class="col-lg-4 attention">关注 <span class="badge">4</span></div>
-						</div>
-					</a>
-				</li>
-				<li class="col-md-4 col-lg-2dot4">
-					<div class="info">
-						<!-- 简介 -->
-						<div class="brief">
-							<h3>WallTosh</h3>
-							<span>28</span>
-						</div>
-						<!-- 作品 -->
-						<div class="works">
-							<a href="#"><img src="testImg/test_designer_work_1.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_2.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_3.jpg" alt="" /></a>
-						</div>
-					</div>
-					<a class="thumbnail" href="#">
-						<!-- 大图 -->
-						<img src="testImg/test_designer.jpg" alt="...">
-						<!-- 底部 -->
-						<div class="footer">
-							<div class="col-lg-4">粉丝 <span class="badge">10</span></div>
-							<div class="col-lg-4">产品 <span class="badge">6</span></div>
-							<div class="col-lg-4 attention">关注 <span class="badge">4</span></div>
-						</div>
-					</a>
-				</li>
-			</ul>
-			<ul class="list-unstyled row">
-				<li class="col-md-4 col-lg-2dot4">
-					<div class="info">
-						<!-- 简介 -->
-						<div class="brief">
-							<h3>WallTosh</h3>
-							<span>28</span>
-						</div>
-						<!-- 作品 -->
-						<div class="works">
-							<a href="#"><img src="testImg/test_designer_work_1.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_2.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_3.jpg" alt="" /></a>
-						</div>
-					</div>
-					<a class="thumbnail" href="#">
-						<!-- 大图 -->
-						<img src="testImg/test_designer.jpg" alt="...">
-						<!-- 底部 -->
-						<div class="footer">
-							<div class="col-lg-4">粉丝 <span class="badge">10</span></div>
-							<div class="col-lg-4">产品 <span class="badge">6</span></div>
-							<div class="col-lg-4 attention">关注 <span class="badge">4</span></div>
-						</div>
-					</a>
-				</li>
-				<li class="col-md-4 col-lg-2dot4">
-					<div class="info">
-						<!-- 简介 -->
-						<div class="brief">
-							<h3>WallTosh</h3>
-							<span>28</span>
-						</div>
-						<!-- 作品 -->
-						<div class="works">
-							<a href="#"><img src="testImg/test_designer_work_1.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_2.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_3.jpg" alt="" /></a>
-						</div>
-					</div>
-					<a class="thumbnail" href="#">
-						<!-- 大图 -->
-						<img src="testImg/test_designer.jpg" alt="...">
-						<!-- 底部 -->
-						<div class="footer">
-							<div class="col-lg-4">粉丝 <span class="badge">10</span></div>
-							<div class="col-lg-4">产品 <span class="badge">6</span></div>
-							<div class="col-lg-4 attention">关注 <span class="badge">4</span></div>
-						</div>
-					</a>
-				</li>
-				<li class="col-md-4 col-lg-2dot4">
-					<div class="info">
-						<!-- 简介 -->
-						<div class="brief">
-							<h3>WallTosh</h3>
-							<span>28</span>
-						</div>
-						<!-- 作品 -->
-						<div class="works">
-							<a href="#"><img src="testImg/test_designer_work_1.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_2.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_3.jpg" alt="" /></a>
-						</div>
-					</div>
-					<a class="thumbnail" href="#">
-						<!-- 大图 -->
-						<img src="testImg/test_designer.jpg" alt="...">
-						<!-- 底部 -->
-						<div class="footer">
-							<div class="col-lg-4">粉丝 <span class="badge">10</span></div>
-							<div class="col-lg-4">产品 <span class="badge">6</span></div>
-							<div class="col-lg-4 attention">关注 <span class="badge">4</span></div>
-						</div>
-					</a>
-				</li>
-				<li class="col-md-4 col-lg-2dot4">
-					<div class="info">
-						<!-- 简介 -->
-						<div class="brief">
-							<h3>WallTosh</h3>
-							<span>28</span>
-						</div>
-						<!-- 作品 -->
-						<div class="works">
-							<a href="#"><img src="testImg/test_designer_work_1.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_2.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_3.jpg" alt="" /></a>
-						</div>
-					</div>
-					<a class="thumbnail" href="#">
-						<!-- 大图 -->
-						<img src="testImg/test_designer.jpg" alt="...">
-						<!-- 底部 -->
-						<div class="footer">
-							<div class="col-lg-4">粉丝 <span class="badge">10</span></div>
-							<div class="col-lg-4">产品 <span class="badge">6</span></div>
-							<div class="col-lg-4 attention">关注 <span class="badge">4</span></div>
-						</div>
-					</a>
-				</li>
-				<li class="col-md-4 col-lg-2dot4">
-					<div class="info">
-						<!-- 简介 -->
-						<div class="brief">
-							<h3>WallTosh</h3>
-							<span>28</span>
-						</div>
-						<!-- 作品 -->
-						<div class="works">
-							<a href="#"><img src="testImg/test_designer_work_1.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_2.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_3.jpg" alt="" /></a>
-						</div>
-					</div>
-					<a class="thumbnail" href="#">
-						<!-- 大图 -->
-						<img src="testImg/test_designer.jpg" alt="...">
-						<!-- 底部 -->
-						<div class="footer">
-							<div class="col-lg-4">粉丝 <span class="badge">10</span></div>
-							<div class="col-lg-4">产品 <span class="badge">6</span></div>
-							<div class="col-lg-4 attention">关注 <span class="badge">4</span></div>
-						</div>
-					</a>
-				</li>
-			</ul>
-			<ul class="list-unstyled row">
-				<li class="col-md-4 col-lg-2dot4">
-					<div class="info">
-						<!-- 简介 -->
-						<div class="brief">
-							<h3>WallTosh</h3>
-							<span>28</span>
-						</div>
-						<!-- 作品 -->
-						<div class="works">
-							<a href="#"><img src="testImg/test_designer_work_1.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_2.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_3.jpg" alt="" /></a>
-						</div>
-					</div>
-					<a class="thumbnail" href="#">
-						<!-- 大图 -->
-						<img src="testImg/test_designer.jpg" alt="...">
-						<!-- 底部 -->
-						<div class="footer">
-							<div class="col-lg-4">粉丝 <span class="badge">10</span></div>
-							<div class="col-lg-4">产品 <span class="badge">6</span></div>
-							<div class="col-lg-4 attention">关注 <span class="badge">4</span></div>
-						</div>
-					</a>
-				</li>
-				<li class="col-md-4 col-lg-2dot4">
-					<div class="info">
-						<!-- 简介 -->
-						<div class="brief">
-							<h3>WallTosh</h3>
-							<span>28</span>
-						</div>
-						<!-- 作品 -->
-						<div class="works">
-							<a href="#"><img src="testImg/test_designer_work_1.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_2.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_3.jpg" alt="" /></a>
-						</div>
-					</div>
-					<a class="thumbnail" href="#">
-						<!-- 大图 -->
-						<img src="testImg/test_designer.jpg" alt="...">
-						<!-- 底部 -->
-						<div class="footer">
-							<div class="col-lg-4">粉丝 <span class="badge">10</span></div>
-							<div class="col-lg-4">产品 <span class="badge">6</span></div>
-							<div class="col-lg-4 attention">关注 <span class="badge">4</span></div>
-						</div>
-					</a>
-				</li>
-				<li class="col-md-4 col-lg-2dot4">
-					<div class="info">
-						<!-- 简介 -->
-						<div class="brief">
-							<h3>WallTosh</h3>
-							<span>28</span>
-						</div>
-						<!-- 作品 -->
-						<div class="works">
-							<a href="#"><img src="testImg/test_designer_work_1.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_2.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_3.jpg" alt="" /></a>
-						</div>
-					</div>
-					<a class="thumbnail" href="#">
-						<!-- 大图 -->
-						<img src="testImg/test_designer.jpg" alt="...">
-						<!-- 底部 -->
-						<div class="footer">
-							<div class="col-lg-4">粉丝 <span class="badge">10</span></div>
-							<div class="col-lg-4">产品 <span class="badge">6</span></div>
-							<div class="col-lg-4 attention">关注 <span class="badge">4</span></div>
-						</div>
-					</a>
-				</li>
-				<li class="col-md-4 col-lg-2dot4">
-					<div class="info">
-						<!-- 简介 -->
-						<div class="brief">
-							<h3>WallTosh</h3>
-							<span>28</span>
-						</div>
-						<!-- 作品 -->
-						<div class="works">
-							<a href="#"><img src="testImg/test_designer_work_1.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_2.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_3.jpg" alt="" /></a>
-						</div>
-					</div>
-					<a class="thumbnail" href="#">
-						<!-- 大图 -->
-						<img src="testImg/test_designer.jpg" alt="...">
-						<!-- 底部 -->
-						<div class="footer">
-							<div class="col-lg-4">粉丝 <span class="badge">10</span></div>
-							<div class="col-lg-4">产品 <span class="badge">6</span></div>
-							<div class="col-lg-4 attention">关注 <span class="badge">4</span></div>
-						</div>
-					</a>
-				</li>
-				<li class="col-md-4 col-lg-2dot4">
-					<div class="info">
-						<!-- 简介 -->
-						<div class="brief">
-							<h3>WallTosh</h3>
-							<span>28</span>
-						</div>
-						<!-- 作品 -->
-						<div class="works">
-							<a href="#"><img src="testImg/test_designer_work_1.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_2.jpg" alt="" /></a>
-							<a href="#"><img src="testImg/test_designer_work_3.jpg" alt="" /></a>
-						</div>
-					</div>
-					<a class="thumbnail" href="#">
-						<!-- 大图 -->
-						<img src="testImg/test_designer.jpg" alt="...">
-						<!-- 底部 -->
-						<div class="footer">
-							<div class="col-lg-4">粉丝 <span class="badge">10</span></div>
-							<div class="col-lg-4">产品 <span class="badge">6</span></div>
-							<div class="col-lg-4 attention">关注 <span class="badge">4</span></div>
-						</div>
-					</a>
-				</li>
+				<%} %>
+				
 			</ul>
 
 			<!-- 分页 -->
@@ -526,50 +191,8 @@
 			</nav>
 		</div>
 
-		<!-- 设计师作品展示 -->
-		<div class="row goodworks">
-			<h2 class="title_lg">设计师作品展示</h2>
-
-			<!-- 分类 -->
-			<div class="classify btn-group btn-group-sm">
-				<a class="active btn btn-default" href="#">全部</a>
-				<a class="btn btn-default" href="#">创意</a>
-				<a class="btn btn-default" href="#">饰品</a>
-				<a class="btn btn-default" href="#">工具</a>
-			</div>
-			<ul class="row list-unstyled goodworks_list">
-				<li class="col-lg-6">
-					<div class="thumbnail col-lg-7" href="#">
-						<!-- 大图 -->
-						<img src="testImg/vLamp_preview_featured.jpg" alt="...">
-						<div class="caption">
-							<a href="#">label</a>
-							<div class="price">￥90</div>
-						</div>
-					</div>
-					<div class="col-lg-5">
-						<h3 class="title_sm">模型简介</h3>
-						<h3 class="title_sm">参数</h3>
-						<h3 class="title_sm">上传者</h3>
-					</div>
-				</li>
-				<li class="col-lg-6">
-					<div class="thumbnail col-lg-7" href="#">
-						<!-- 大图 -->
-						<img src="testImg/vLamp_preview_featured.jpg" alt="...">
-						<div class="caption">
-							<a href="#">label</a>
-							<div class="price">￥90</div>
-						</div>
-					</div>
-					<div class="col-lg-5">
-						<h3 class="title_sm">模型简介</h3>
-						<h3 class="title_sm">参数</h3>
-						<h3 class="title_sm">上传者</h3>
-					</div>
-				</li>
-			</ul>
-		</div>
+		
+	
 	</div>
 
 	<!-- 底部 -->

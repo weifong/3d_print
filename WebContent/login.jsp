@@ -54,7 +54,7 @@
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
-				<a href="index.html">
+				<a href="index.jsp">
 					 <img alt="Brand" src="images/logo.png" height="50px">
 				</a>
 			</div>
@@ -69,7 +69,7 @@
 				        </ul>
 			        </li>
 					<li><a href="model.jsp">模型库</a></li>
-					<li><a href="designer.html">设计师</a></li>
+					<li><a href="designer.jsp">设计师</a></li>
 					<li><a href="join.html">加盟/入驻</a></li>
 					<li><a href="shangcheng.html">商城</a></li>
 				</ul>
@@ -119,7 +119,7 @@
 	<div style="height: 139px"></div>
     <section class="picture">
 		<div class="pic">
-		<a href="index.html" ><font size="4"> 首页</font> </a>
+		<a href="index.jsp" ><font size="4"> 首页</font> </a>
 		/
 		 <font size="4"> 登录</font>
 		</div> 
@@ -166,7 +166,7 @@
 				<input type="password" name="password"  />
 				<span class="error">
 			</label>
-			<button onclick="for_login()" >登录</button>
+			<button onclick="return for_login()">登录</button>
         </fieldset>
             
      <!-- 

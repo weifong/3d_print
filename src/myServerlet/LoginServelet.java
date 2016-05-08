@@ -54,14 +54,14 @@ public class LoginServelet extends HttpServlet {
 		    	{
 		    		System.out.println(".........");
 		    		request.getSession().setAttribute("flag", "true");
-		    		request.getSession().setAttribute("username",rs.getString(2));
+		    		request.getSession().setAttribute("user_id",rs.getString(1));
 		    		strUserType=rs.getString(8);
                     System.out.println("strUserType:"+strUserType);
-		    		if(strUserType.equals("�����û�"))
+		    		if(strUserType.equals("个人用户"))
 		    		{
-		    			response.sendRedirect("customer.jsp");
+		    			response.sendRedirect("index.jsp");
 		    		}
-		    		else if(strUserType.equals("������"))
+		    		else if(strUserType.equals("设计师"))
 		    		{
 		    			response.sendRedirect("enterbusiness.jsp");
 		    		}

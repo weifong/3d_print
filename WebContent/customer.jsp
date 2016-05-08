@@ -37,7 +37,7 @@
 				<div class="menu">
 					<ul>
 						<li>
-							<a href="index.html">首页</a>
+							<a href="index.jsp">首页</a>
 						</li>
 						<li>
 							<a href="cus_order_list.jsp" target="view_information">订单详情</a>
