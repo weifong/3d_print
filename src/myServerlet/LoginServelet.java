@@ -55,6 +55,7 @@ public class LoginServelet extends HttpServlet {
 		    		System.out.println(".........");
 		    		request.getSession().setAttribute("flag", "true");
 		    		request.getSession().setAttribute("user_id",rs.getString(1));
+		    		request.getSession().setAttribute("username", strUserName);
 		    		strUserType=rs.getString(8);
                     System.out.println("strUserType:"+strUserType);
 		    		if(strUserType.equals("个人用户"))

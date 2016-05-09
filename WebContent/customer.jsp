@@ -25,6 +25,7 @@
 	</head>
 
 	<body>
+	<%@include file="share.jsp" %>
 		<div class="container">
 			<div class="top">
 				<div class="head_left">

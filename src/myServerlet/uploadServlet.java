@@ -29,8 +29,8 @@ public class uploadServlet extends HttpServlet {
 
 		//response.setContentType("text/html");
 		//response.setCharacterEncoding("utf-8");
-		request.setCharacterEncoding("GBK");
-		String strCompanyAddress=request.getAttribute("companyaddress").toString();
+		request.setCharacterEncoding("utf-8");
+		String strCompanyAddress=request.getParameter("address");
 		System.out.println("strCompanyAddress:"+strCompanyAddress);
 		DBbean db=new DBbean();
 		SmartUpload mySmartUpload=new SmartUpload(); 

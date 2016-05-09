@@ -40,18 +40,28 @@
     <servlet-name>AttentionServlet</servlet-name>
     <servlet-class>myServerlet.AttentionServlet</servlet-class>
   </servlet>
-    <servlet-mapping>
+  <servlet-mapping>
     <servlet-name>AttentionServlet</servlet-name>
     <url-pattern>/AttentionServlet</url-pattern>
   </servlet-mapping>
   <servlet>
-  <description></description>
-  <display-name>uploadServlet</display-name>
-  <servlet-name>uploadServlet</servlet-name>
-  <servlet-class>myServerlet.uploadServlet</servlet-class>
+    <description></description>
+    <display-name>uploadServlet</display-name>
+    <servlet-name>uploadServlet</servlet-name>
+    <servlet-class>myServerlet.uploadServlet</servlet-class>
   </servlet>
-    <servlet-mapping>
+  <servlet-mapping>
     <servlet-name>uploadServlet</servlet-name>
     <url-pattern>/uploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>exitServlet</display-name>
+    <servlet-name>exitServlet</servlet-name>
+    <servlet-class>myServerlet.exitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>exitServlet</servlet-name>
+    <url-pattern>/exitServlet</url-pattern>
   </servlet-mapping>
 </web-app>
