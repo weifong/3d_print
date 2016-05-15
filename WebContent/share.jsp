@@ -40,6 +40,7 @@
 					<li><a href="join.html">加盟/入驻</a></li>
 					<li><a href="shangcheng.html">商城</a></li>
                     <li><a href="dingdanguanli.html">我的订单</a></li>
+                    <li><a href="shejishigeren.jsp">个人中心</a></li>
 				</ul>
 
 				<!-- 右边占位 -->

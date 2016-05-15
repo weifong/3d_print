@@ -156,7 +156,9 @@
                     <p class="pull-right">
                         <br>
                         <br>
+                        <a href="add_model.jsp">
                         <button type="button" class="btn  btn-primary ">添加作品</button>
+                        </a>
                     </p>
                 </div>
                 <div class="row">

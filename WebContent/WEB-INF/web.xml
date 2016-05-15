@@ -74,4 +74,14 @@
     <servlet-name>RegisterServlet</servlet-name>
     <url-pattern>/RegisterServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddModelServlet</display-name>
+    <servlet-name>AddModelServlet</servlet-name>
+    <servlet-class>myServerlet.AddModelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddModelServlet</servlet-name>
+    <url-pattern>/AddModelServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

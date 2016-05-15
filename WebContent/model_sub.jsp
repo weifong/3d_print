@@ -69,7 +69,13 @@
 			String strModelName = null;
 			String str3dImage_url = null;
 			String strSuitType = null;
+			String strSmallimg1=null;
+			String strSmallimg2=null;
+			String strSmallimg3=null;
+			String strSmallimg4=null;
+			String strStlUrl="stlmodel/bike_frame.stl";
 			String strSql = "select * from model where id=" + iId;
+			
 			ResultSet rs = DataBaseBean.querySql(strSql);
 			while (rs.next()) {
 				iUploaderId = rs.getInt("designerid");
@@ -81,6 +87,11 @@
 				str3dImage_url = rs.getString("3dImage_url");
 				strModelType = rs.getString("model_type");
 				strSuitType = rs.getString("suite_type");
+				strSmallimg1=rs.getString("smallimg1");
+				strSmallimg2=rs.getString("smallimg2");
+				strSmallimg3=rs.getString("smallimg3");
+				strSmallimg4=rs.getString("smallimg4");
+				
 			}
 			rs.close();
 			//根据userid获取上传者的名字
@@ -99,30 +110,27 @@
 		<div class="row panel panel-default">
 			<!-- 左边 -->
 			<div class="col-lg-6 panel-body">
-				<img src="<%=str3dImage_url%>" class="img-responsive" alt="...">
+			<a href="./WebGL/WebGLViewer/STL.html?modelName=<%=strStlUrl%>">
+				<img src="<%=str3dImage_url%>" class="img-responsive" alt="<%=str3dImage_url%>">
+			</a>
 				<div class="pic_sm_container">
 					<div class="col-lg-2dot4 col-sm-2">
-						<a href="#" class="thumbnail"> <img src="testImg/sm_pic.svg"
+						<a href="#" class="thumbnail"> <img src="<%=strSmallimg1 %>"
 							alt="...">
 						</a>
 					</div>
 					<div class="col-lg-2dot4 col-sm-2">
-						<a href="#" class="thumbnail"> <img src="testImg/sm_pic.svg"
+						<a href="#" class="thumbnail"> <img src="<%=strSmallimg2 %>"
 							alt="...">
 						</a>
 					</div>
 					<div class="col-lg-2dot4 col-sm-2">
-						<a href="#" class="thumbnail"> <img src="testImg/sm_pic.svg"
+						<a href="#" class="thumbnail"> <img src="<%=strSmallimg3 %>"
 							alt="...">
 						</a>
 					</div>
 					<div class="col-lg-2dot4 col-sm-2">
-						<a href="#" class="thumbnail"> <img src="testImg/sm_pic.svg"
-							alt="...">
-						</a>
-					</div>
-					<div class="col-lg-2dot4 col-sm-2">
-						<a href="#" class="thumbnail"> <img src="testImg/sm_pic.svg"
+						<a href="#" class="thumbnail"> <img src="<%=strSmallimg4 %>"
 							alt="...">
 						</a>
 					</div>
@@ -146,7 +154,7 @@
 						<span class="glyphicon glyphicon-send"></span> 去打印
 					</div>
 					<div class="download btn btn-info">
-					<a href="uploadServlet?<%="/"+str3dImage_url%>">
+					<a href="uploadServlet?<%="/"+strStlUrl%>">
 						<span class="glyphicon glyphicon-save"></span> 免费下载
 					</a>
 					</div>
