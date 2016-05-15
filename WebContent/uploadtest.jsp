@@ -7,12 +7,15 @@
 </head>
 
 <body>
+<%
+session.setAttribute("userid", "1");
+%>
 <div align="center" >
 <form action="uploadServlet" method="post" enctype="multipart/form-data">
 <div>
 文件1<input type="file" name="file1" />
-文件2<input type="file" name="file2"/>
-地址   <input type="text"  name="address" />
+文件2<input type="file" name="file2" />
+地址   <input type="text"  name="address" id="address"/>
 </div>
 <div>
   <div align="center">

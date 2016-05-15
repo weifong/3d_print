@@ -56,7 +56,10 @@ public class LoginServelet extends HttpServlet {
 		    		request.getSession().setAttribute("flag", "true");
 		    		request.getSession().setAttribute("user_id",rs.getString(1));
 		    		request.getSession().setAttribute("username", strUserName);
-		    		strUserType=rs.getString(8);
+		    		request.getSession().setAttribute("sex", rs.getString("sex"));
+		    		request.getSession().setAttribute("address", rs.getString("address"));
+		    		strUserType=rs.getString("usertype");
+		    		int iUserId=rs.getInt("id");
                     System.out.println("strUserType:"+strUserType);
 		    		if(strUserType.equals("个人用户"))
 		    		{
@@ -64,11 +67,24 @@ public class LoginServelet extends HttpServlet {
 		    		}
 		    		else if(strUserType.equals("设计师"))
 		    		{
-		    			response.sendRedirect("enterbusiness.jsp");
+		    			strSql="select * from designer where userid="+iUserId;
+		    			rs=dbBean.querySql(strSql);
+		    			if(rs.next())
+		    			{
+		    				request.getSession().setAttribute("designerid", rs.getInt("id"));
+		    				request.getSession().setAttribute("userid", rs.getInt("userid"));
+		    				request.getSession().setAttribute("fanscount", rs.getInt("fanscount"));
+		    				request.getSession().setAttribute("modelcount", rs.getInt("modelcount"));
+		    				request.getSession().setAttribute("attentioncount", rs.getInt("attentioncount"));
+		    				request.getSession().setAttribute("integral", rs.getInt("integral"));
+		    				request.getSession().setAttribute("showlogo", rs.getString("showlogo"));
+		    				
+		    			}
+		    			response.sendRedirect("shejishigeren.jsp");
 		    		}
 		    		else
 		    		{
-		    			response.sendRedirect("joinbusiness.jsp");
+		    			response.sendRedirect("jiamengshanggeren.jsp");
 		    		}
 		    		
 		    	}

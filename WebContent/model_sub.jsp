@@ -31,12 +31,12 @@
 		</ul>
 
 		<%
-			out.println("hello" + session.getAttribute("user_id").toString());
 			String stridTemp = new String(request.getQueryString().toString()
 					.getBytes("ISO-8859-1"), "utf-8");
 			if (stridTemp == null || stridTemp == "") {
 				stridTemp = session.getAttribute("model_id").toString();
 			}
+			session.setAttribute("model_id", stridTemp);
 			int iId = Integer.parseInt(stridTemp);
 			//String strIsNew=session.getAttribute("isNewBrowser").toString();
 			String strNewid = "";
@@ -146,7 +146,9 @@
 						<span class="glyphicon glyphicon-send"></span> 去打印
 					</div>
 					<div class="download btn btn-info">
+					<a href="uploadServlet?<%="/"+str3dImage_url%>">
 						<span class="glyphicon glyphicon-save"></span> 免费下载
+					</a>
 					</div>
 				</div>
 				<form name="modelform" action="Model_sub" method="post">

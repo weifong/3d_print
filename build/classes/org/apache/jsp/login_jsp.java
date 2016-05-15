@@ -4,6 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import java.sql.*;
+import java.sql.*;
 
 public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -11,6 +12,11 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
 
   private static java.util.List _jspx_dependants;
+
+  static {
+    _jspx_dependants = new java.util.ArrayList(1);
+    _jspx_dependants.add("/share.jsp");
+  }
 
   private javax.el.ExpressionFactory _el_expressionfactory;
   private org.apache.AnnotationProcessor _jsp_annotationprocessor;
@@ -105,6 +111,24 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.print(flag );
       out.write("')\">\r\n");
       out.write("\r\n");
+      out.write("\t");
+      out.write("\r\n");
+      out.write("<!DOCTYPE HTML>\r\n");
+      out.write("<html lang=\"en\">\r\n");
+      out.write("<head>\r\n");
+      out.write("\t<meta charset=\"UTF-8\">\r\n");
+      out.write("\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n");
+      out.write("\t<link rel=\"stylesheet\" href=\"css/bootstrap.min.css\" />\r\n");
+      out.write("\t<link rel=\"stylesheet\" href=\"css/ruzhuxinxi.css\" />\r\n");
+      out.write("\t<script type=\"text/javascript\" src=\"js/jquery.min.js\"></script>\r\n");
+      out.write("\t<script src=\"js/bootstrap.min.js\"></script>\r\n");
+      out.write("\t<script src=\"js/scale.js\"></script>\r\n");
+      out.write("\t<title> 加盟条款</title>\r\n");
+      out.write("\t<link rel=\"stylesheet\" href=\"css/common.css\"/>\r\n");
+      out.write("\t<script src=\"js/common.js\"></script>\r\n");
+      out.write("\t\r\n");
+      out.write("</head>\r\n");
+      out.write("<body>\r\n");
       out.write("\t<!-- 导航栏 -->\r\n");
       out.write("\t<nav class=\"navbar navbar-default navbar-fixed-top\">\r\n");
       out.write("\t\t<div class=\"container-fluid\">\r\n");
@@ -122,19 +146,45 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t<a href=\"#\">定制</a>\r\n");
       out.write("\t\t\t\t\t\t<ul class=\"dropdown-menu\">\r\n");
       out.write("\t\t\t\t\t\t\t<li><a href=\"shoushudaoban.html\">手术导板定制</a></li>\r\n");
+      out.write("                            <li><a href=\"gongyedingzhi.html\">工业/个性化定制</a></li>\r\n");
       out.write("\t\t\t\t        </ul>\r\n");
       out.write("\t\t\t        </li>\r\n");
       out.write("\t\t\t\t\t<li><a href=\"model.jsp\">模型库</a></li>\r\n");
-      out.write("\t\t\t\t\t<li><a href=\"designer.html\">设计师</a></li>\r\n");
+      out.write("\t\t\t\t\t<li><a href=\"designer.jsp\">设计师</a></li>\r\n");
       out.write("\t\t\t\t\t<li><a href=\"join.html\">加盟/入驻</a></li>\r\n");
       out.write("\t\t\t\t\t<li><a href=\"shangcheng.html\">商城</a></li>\r\n");
+      out.write("                    <li><a href=\"dingdanguanli.html\">我的订单</a></li>\r\n");
       out.write("\t\t\t\t</ul>\r\n");
       out.write("\r\n");
       out.write("\t\t\t\t<!-- 右边占位 -->\r\n");
       out.write("\t\t\t\t<div class=\"navbar-right\"></div>\r\n");
       out.write("\t\t\t\t<ul class=\"nav navbar-nav navbar-right\">\r\n");
-      out.write("\t\t\t\t\t<a href=\"login.jsp\" class=\"btn btn-primary navbar-btn\">登录</a>\r\n");
-      out.write("\t\t\t\t\t<a href=\"register.html\" class=\"btn btn-default navbar-btn\">注册</a>\r\n");
+      out.write("\t\t\t\t");
+
+				   String strUser=session.getAttribute("username")==null?"":session.getAttribute("username").toString();
+				   if(strUser =="")
+				   {
+				
+      out.write("\r\n");
+      out.write("\t\t\t\t<a href=\"login.jsp\" class=\"btn btn-primary navbar-btn\">登录</a>\r\n");
+      out.write("\t\t\t\t<a href=\"register.jsp\" class=\"btn btn-default navbar-btn\">注册</a>\t\r\n");
+      out.write("\t\t\t\t");
+   
+				   }
+				   else
+				   {
+				
+      out.write("\r\n");
+      out.write("\t\t\t\t<a href=\"#\" class=\"btn btn-default navbar-btn\">欢迎您");
+      out.print(strUser );
+      out.write("</a>\r\n");
+      out.write("\t\t\t\t<form action=\"exitServlet\" method=\"post\"><button>退出</button></form>\r\n");
+      out.write("\t\t\t\t");
+	   
+				   }
+				
+      out.write("\r\n");
+      out.write("\t\t\t\t\t\r\n");
       out.write("\t\t\t\t</ul>\r\n");
       out.write("\t\t\t\t<!-- 搜索框 -->\r\n");
       out.write("\t\t\t\t<form class=\"navbar-form navbar-right\" role=\"search\">\r\n");
@@ -158,7 +208,6 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t</div><!-- /.navbar-collapse -->\r\n");
       out.write("\t\t</div><!-- /.container-fluid -->\r\n");
       out.write("\t</nav>\r\n");
-      out.write("\r\n");
       out.write("\t<!-- 侧边栏 -->\r\n");
       out.write("\t<div class=\"slide_bar\">\r\n");
       out.write("\t\t<ul class=\"nav nav-list panel panel-default\" role=\"group\">\r\n");
@@ -169,13 +218,16 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t<li><a id=\"btn_to_top\"><br />顶部</a></li>\r\n");
       out.write("\t\t</ul>\r\n");
       out.write("\t</div>\r\n");
+      out.write("</body>\r\n");
+      out.write("</html>");
+      out.write("\r\n");
       out.write("\r\n");
       out.write("<div class=\"wrapper\">\r\n");
       out.write("\r\n");
       out.write("\t<div style=\"height: 139px\"></div>\r\n");
       out.write("    <section class=\"picture\">\r\n");
       out.write("\t\t<div class=\"pic\">\r\n");
-      out.write("\t\t<a href=\"index.html\" ><font size=\"4\"> 首页</font> </a>\r\n");
+      out.write("\t\t<a href=\"index.jsp\" ><font size=\"4\"> 首页</font> </a>\r\n");
       out.write("\t\t/\r\n");
       out.write("\t\t <font size=\"4\"> 登录</font>\r\n");
       out.write("\t\t</div> \r\n");
@@ -222,7 +274,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t<input type=\"password\" name=\"password\"  />\r\n");
       out.write("\t\t\t\t<span class=\"error\">\r\n");
       out.write("\t\t\t</label>\r\n");
-      out.write("\t\t\t<button onclick=\"for_login()\" >登录</button>\r\n");
+      out.write("\t\t\t<button onclick=\"return for_login()\">登录</button>\r\n");
       out.write("        </fieldset>\r\n");
       out.write("            \r\n");
       out.write("     <!-- \r\n");
@@ -260,7 +312,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t<h2><span class=\"glyphicon glyphicon-user\"></span> 我是设计师</h2>\r\n");
       out.write("\t\t\t\t</li>\r\n");
       out.write("\t\t\t\t<li class=\"col-lg-2\">\r\n");
-      out.write("\t\t\t\t\t<h2><span class=\"glyphicon glyphicon-cog\"></span> 云制造</h2>\r\n");
+      out.write("\t\t\t\t\t<h2><span class=\"glyphicon glyphicon-cog\"></span> 我是加盟商</h2>\r\n");
       out.write("\t\t\t\t</li>\r\n");
       out.write("\t\t\t\t<li class=\"col-lg-2\">\r\n");
       out.write("\t\t\t\t\t<h2><span class=\"glyphicon glyphicon-wrench\"></span> 服务支持</h2>\r\n");

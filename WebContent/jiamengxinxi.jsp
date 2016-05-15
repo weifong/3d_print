@@ -1,15 +1,15 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
+<%@include file="Parameter.jsp" %>
 <!DOCTYPE HTML>
-<html lang="zh">
+<html lang="utf-8">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="css/ruzhuxinxi.css" />
+	<link rel="stylesheet" href="css/jiamengxinxi.css" />
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/scale.js"></script>
-	<script src="js/ruzhuxinxi.js"></script>
 	<title> 加盟条款</title>
 	<script type="text/javascript">
 		function a_click(v){
@@ -24,34 +24,35 @@
 	<script src="js/common.js"></script>
 </head>
 <body>
-	    <%@include file="share.jsp" %>
+<%@ include file="share.jsp" %>
+	
 	<div style="height:100px"></div>
 	<div class="wrapper">
 		<section class="xinxi">
 			
 			 <div id="xinxi1" class="h" hidden="true" ><!---->
-				<form name="ruzhuForm" action="uploadServlet" method="post" enctype="multipart/form-data">
+				<form action="" >
 					<label for="" class="in">
 						<p><span >企业营业执照</span></p>
-						<input type="file" id="license" name="license"/>
+						<input type="text" />
 					</label>	
+					<label for=""class="in">
+						<p><span>企业所在地址</span></p>
+						<input type="text" />
+					</label>
 					<label for="" class="in">
 						<p><span> 企业法人身份证</span></p>
-						<input type="file" id="identitycard" name="identitycard"/>
+						<input type="text" />
 					</label>	
 					<label for="" class="in">
 						<p><span> 代理人身份证</span></p>
-						<input type="file" id="agent" name="agent"/>
+						<input type="text" />
 					</label>
 					<label for="" class="in">
 						<p><span> 设备或材料照片</span></p>
-						<input type="file" id="pic" name="pic"/>
+						<input type="file" />
 					</label>
-				    <label for=""class="in">
-						<p><span>企业所在地址</span></p>
-						<input type="text" id="address" name="address"/>
-					</label>
-					<input type="submit" style="width:50px;height:30px;" value="提交" onclick="return onRuZhu()"/>
+					<input type="submit" style="width:50px;height:30px;" value="提交" />
 				</form>
 			</div>
 			<div id="tiaok" class="h" >
