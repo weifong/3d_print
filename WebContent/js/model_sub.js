@@ -28,6 +28,16 @@ function onComment()
 	    	  window.alert("对不起，评价内容不能为空哦!")
 	    	  return false;
 	    	  }
+	      if(strinfon.length>250)
+	    	  {
+	    	  
+	    	  window.alert("对不起，评价内容不能超过256个字符!")
+	    	  return false;
+	    	  }
 	   }
    return true;
+}
+function showImg(szvalue)
+{
+	document.getElementById("bigImg").src=szvalue;
 }

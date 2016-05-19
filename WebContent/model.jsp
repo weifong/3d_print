@@ -77,7 +77,7 @@ while(rs.next())
 %> 
 	<li class="col-md-4 col-lg-2dot4">
 	<a class="thumbnail" href="model_sub.jsp?<%=iModelId%>">
-		<img src="<%=str3dimage %>" alt="<%=strName%>">
+		<img src="<%=str3dimage %>" width="280" height="250"  alt="<%=strName%>">
 		<div class="caption">
 			<h3><%=strName %></h3>
 		</div>

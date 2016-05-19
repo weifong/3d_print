@@ -35,8 +35,9 @@ public class exitServlet extends HttpServlet {
 		response.setContentType("text/html");
 		response.setCharacterEncoding("utf-8");
 		request.setCharacterEncoding("UTF-8");
-		request.getSession().setAttribute("username", null);
-		request.getSession().setAttribute("userid", null);
+		request.getSession().setAttribute("username", "");
+		request.getSession().setAttribute("userid", "");
+		request.getSession().setAttribute("usertype", null);
 		response.sendRedirect("login.jsp");
 	}
 

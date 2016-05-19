@@ -20,7 +20,7 @@
     </head>
     <body>
         <!-- 导航栏 -->
-        <input id="userid" type="hidden" value="<%=session.getAttribute("user_id")==null?"":session.getAttribute("user_id").toString() %>"/>
+        <input id="userid" type="hidden" value="<%=session.getAttribute("userid")==null?"":session.getAttribute("userid").toString() %>"/>
            <!-- 导航栏 -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -42,9 +42,10 @@
                     </li>
                     <li><a href="model.jsp">模型库</a></li>
                     <li><a href="designer.jsp">设计师</a></li>
-                    <li class="active"><a>加盟/入驻</a></li>
-                    <li><a href="shangcheng.html">商城</a></li>
-                    <li><a href="dingdanguanli.html">我的订单</a></li>
+                    <li><a href="join.html">加盟/入驻</a></li>
+                    <li><a href="shangcheng.jsp">商城</a></li>
+                    <li><a href="dingdanguanli.jsp">我的订单</a></li>
+                     <li><a href="PersonalManage.jsp">个人中心</a></li>
                 </ul>
                 <!-- 右边占位 -->
                 <div class="navbar-right"></div>
@@ -147,7 +148,7 @@
                     <img data-src="holder.js/头像140x140" class="img-circle" alt="头像140x140" src="<%=strlogo %>" data-holder-rendered="true" style="width: 140px; height: 140px;"></img>                 
                     <h2 class="title_sm">Ta的积分：<%=strintegral %></h2>
                     <%
-                       String strUserid=session.getAttribute("user_id")==null?"":session.getAttribute("user_id").toString();
+                       String strUserid=session.getAttribute("userid")==null?"":session.getAttribute("userid").toString();
                       
                     if(strUserid!="")
                        {

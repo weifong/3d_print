@@ -24,7 +24,7 @@
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
-				<a href="index.jsp">
+				<a href="index.html">
 					 <img alt="Brand" src="images/logo.png" height="50px">
 				</a>
 			</div>
@@ -41,16 +41,33 @@
 			        </li>
 					<li><a href="model.jsp">模型库</a></li>
 					<li><a href="designer.jsp">设计师</a></li>
-					<li><a href="join.html">加盟/入驻</a></li>
-					<li><a href="shangcheng.html">商城</a></li>
-                    <li><a href="dingdanguanli.html">我的订单</a></li>
+					<li><a href="join.jsp">加盟/入驻</a></li>
+					<li><a href="shangcheng.jsp">商城</a></li>
+                    <li><a href="dingdanguanli.jsp">我的订单</a></li>
+                    <li><a href="PersonalManage.jsp">个人中心</a></li>
 				</ul>
 
 				<!-- 右边占位 -->
 				<div class="navbar-right"></div>
 				<ul class="nav navbar-nav navbar-right">
-					<a href="login.jsp" class="btn btn-primary navbar-btn">登录</a>
-					<a href="register.html" class="btn btn-default navbar-btn">注册</a>
+				<%
+				   String strUser=session.getAttribute("username")==null?"":session.getAttribute("username").toString();
+				   if(strUser =="")
+				   {
+				%>
+				<a href="login.jsp" class="btn btn-primary navbar-btn">登录</a>
+				<a href="register.jsp" class="btn btn-default navbar-btn">注册</a>	
+				<%   
+				   }
+				   else
+				   {
+				%>
+				<a href="#" class="btn btn-default navbar-btn">欢迎您<%=strUser %></a>
+				<form action="exitServlet" method="post" class="btn btn-default"><button class="btn btn-default">退出</button></form>
+				<%	   
+				   }
+				%>
+					
 				</ul>
 				<!-- 搜索框 -->
 				<form class="navbar-form navbar-right" role="search">
@@ -74,7 +91,6 @@
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 	</nav>
-
 	<!-- 侧边栏 -->
 	<div class="slide_bar">
 		<ul class="nav nav-list panel panel-default" role="group">
@@ -85,7 +101,6 @@
 			<li><a id="btn_to_top"><br />顶部</a></li>
 		</ul>
 	</div>
-
 <div class="wrapper">
 	<div style="height: 119px"></div>
 	<section class="prompt">

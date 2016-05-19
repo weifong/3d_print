@@ -1,4 +1,4 @@
-package myServerlet;
+
 import jspbean.DBbean;
 
 import java.io.IOException;

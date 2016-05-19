@@ -19,17 +19,17 @@
 </head>
 <body>
 	<input type="hidden" id="userid"
-		value="<%=null==session.getAttribute("user_id")?"":session.getAttribute("user_id").toString()%>" />
+		value="<%=null==session.getAttribute("userid")?"":session.getAttribute("userid").toString()%>" />
     <%@include file="share.jsp" %>
 	<div class="container">
 
-		<!-- 路径导航 -->
+		<!-- 路径导航 
 		<ul class="row breadcrumb">
 			<li><a href="#">首页</a></li>
 			<li><a href="#">模型</a></li>
 			<li class="active">模型下载</li>
 		</ul>
-
+        -->
 		<%
 			String stridTemp = new String(request.getQueryString().toString()
 					.getBytes("ISO-8859-1"), "utf-8");
@@ -111,26 +111,27 @@
 			<!-- 左边 -->
 			<div class="col-lg-6 panel-body">
 			<a href="./WebGL/WebGLViewer/STL.html?modelName=<%=strStlUrl%>">
-				<img src="<%=str3dImage_url%>" class="img-responsive" alt="<%=str3dImage_url%>">
+				<img src="<%=str3dImage_url%>"  class="img-responsive"  width="280" height="250" alt="<%=str3dImage_url%>" id="bigImg">
 			</a>
-				<div class="pic_sm_container">
+				<div class="pic_sm_container" >
+					<div class="col-lg-2dot4 col-sm-2" >
+						<a href="javascript:void(0)" onclick="showImg('<%=strSmallimg1%>')" class="thumbnail"> <img  src="<%=strSmallimg1 %>"
+							alt="...">
+						</a>
+						
+					</div>
 					<div class="col-lg-2dot4 col-sm-2">
-						<a href="#" class="thumbnail"> <img src="<%=strSmallimg1 %>"
+						<a href="javascript:void(0)" onclick="showImg('<%=strSmallimg2%>')"  class="thumbnail"> <img src="<%=strSmallimg2 %>"
 							alt="...">
 						</a>
 					</div>
 					<div class="col-lg-2dot4 col-sm-2">
-						<a href="#" class="thumbnail"> <img src="<%=strSmallimg2 %>"
+						<a href="javascript:void(0)" onclick="showImg('<%=strSmallimg3%>')"  class="thumbnail"> <img  src="<%=strSmallimg3 %>"
 							alt="...">
 						</a>
 					</div>
 					<div class="col-lg-2dot4 col-sm-2">
-						<a href="#" class="thumbnail"> <img src="<%=strSmallimg3 %>"
-							alt="...">
-						</a>
-					</div>
-					<div class="col-lg-2dot4 col-sm-2">
-						<a href="#" class="thumbnail"> <img src="<%=strSmallimg4 %>"
+						<a href="javascript:void(0)" onclick="showImg('<%=strSmallimg4%>')"  class="thumbnail"> <img   src="<%=strSmallimg4 %>"
 							alt="...">
 						</a>
 					</div>
@@ -195,17 +196,27 @@
 						<%
 						     strSql="select * from comment where modelid="+iId;
 						     rs=DataBaseBean.querySql(strSql);
+						     String strUserLogo=null;
+						     String strUserName=null;
 						     while(rs.next())
 						     {
 						    	 String strComment=rs.getString("info");
 						    	 int iUserid=rs.getInt("userid");
+						    	 strSql="select * from userinfo where id="+iUserid;
+						    	 ResultSet rs1=DataBaseBean.querySql(strSql);
+						    	 if(rs1.next())
+						    	 {
+						    		 strUserLogo=rs1.getString("showlogo");
+						    		 strUserName=rs1.getString("name");
+						    	 }
+						    	 
 						    	 String strTime=rs.getString("time");
 						    
 						%>
 						<li id="review-267599901000" class="J_KgRate_ReviewItem kg-rate-ct-review-item" tabindex="0">
 							<div class="from-whom" style="float: left;">
-								<img src="designerimg/1.jpg" alt="" width="56" height="50">
-								<div>用户<%=iUserid %></div>
+								<img src="<%=strUserLogo %>" alt="" width="56" height="50">
+								<div>用户<%=strUserName %></div>
 							</div>
 							<div class="review-details"">
 								<div class="tb-rev-item " data-id="267599901000">

@@ -24,9 +24,9 @@
 	<script src="js/common.js"></script>
 </head>
 <%
-if(null == session.getAttribute("user_id"))
+if(null == session.getAttribute("userid"))
 {
-	session.setAttribute("user_id", "");
+	session.setAttribute("userid", "");
 }
 %>
 <body>

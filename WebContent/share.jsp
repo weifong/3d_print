@@ -37,10 +37,10 @@
 			        </li>
 					<li><a href="model.jsp">模型库</a></li>
 					<li><a href="designer.jsp">设计师</a></li>
-					<li><a href="join.html">加盟/入驻</a></li>
-					<li><a href="shangcheng.html">商城</a></li>
-                    <li><a href="dingdanguanli.html">我的订单</a></li>
-                    <li><a href="shejishigeren.jsp">个人中心</a></li>
+					<li><a href="join.jsp">加盟/入驻</a></li>
+					<li><a href="shangcheng.jsp">商城</a></li>
+                    <li><a href="dingdanguanli.jsp">我的订单</a></li>
+                    <li><a href="PersonalManage.jsp">个人中心</a></li>
 				</ul>
 
 				<!-- 右边占位 -->

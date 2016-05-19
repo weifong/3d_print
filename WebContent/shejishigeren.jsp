@@ -48,9 +48,10 @@
                     </li>
                     <li><a href="model.jsp">模型库</a></li>
                     <li><a href="designer.jsp">设计师</a></li>
-                    <li class="active"><a>加盟/入驻</a></li>
-                    <li><a href="shangcheng.html">商城</a></li>
-                    <li><a href="dingdanguanli.html">我的订单</a></li>
+                    <li><a href="join.html">加盟/入驻</a></li>
+                    <li><a href="shangcheng.jsp">商城</a></li>
+                    <li><a href="dingdanguanli.jsp">我的订单</a></li>
+                     <li><a href="PersonalManage.jsp">个人中心</a></li>
                 </ul>
                 <!-- 右边占位 -->
                 <div class="navbar-right"></div>
@@ -179,15 +180,15 @@
                     %>
                         <div class="col-lg-12 thumbnail">
                             <div class="col-md-4">
-                                <img alt="image" class="feed-photo" src="<%=str3dimage%>">
+                                <img alt="image" class="feed-photo" width="280" height="250" src="<%=str3dimage%>">
                             </div>
                             <div class="col-md-6">
                                 <h3>项目标题:<%=strModelName %></h3>
                                 <p>项目描述:<%=strDescribe %></p>
                             </div>
                             <div class="col-md-2">
-                                <button type="button" class="btn  btn-danger  btn-block ">删除</button>
-                                <button type="button" class="btn  btn-success  btn-block">修改</button>
+                               <a href="deleteModel.jsp?<%=iModelId %>"> <button type="button" class="btn  btn-danger  btn-block ">删除</button></a>
+                                <a href="updateModel.jsp?<%=iModelId %>"><button type="button" class="btn  btn-success  btn-block">修改</button></a>
                             </div>
                         </div>
                       <br>

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50624
 File Encoding         : 65001
 
-Date: 2016-05-15 23:20:20
+Date: 2016-05-19 23:50:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -25,7 +25,7 @@ CREATE TABLE `attention` (
   `designerid` int(11) DEFAULT NULL,
   `result` int(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of attention
@@ -35,6 +35,9 @@ INSERT INTO `attention` VALUES ('6', '20', '4', '1');
 INSERT INTO `attention` VALUES ('7', '21', '2', '1');
 INSERT INTO `attention` VALUES ('8', '15', '1', '0');
 INSERT INTO `attention` VALUES ('9', '15', '3', '1');
+INSERT INTO `attention` VALUES ('10', '23', '1', '0');
+INSERT INTO `attention` VALUES ('11', '25', '1', '0');
+INSERT INTO `attention` VALUES ('12', '24', '1', '0');
 
 -- ----------------------------
 -- Table structure for comment
@@ -47,7 +50,7 @@ CREATE TABLE `comment` (
   `info` varchar(256) DEFAULT NULL,
   `time` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of comment
@@ -57,6 +60,16 @@ INSERT INTO `comment` VALUES ('11', '11', '21', '我是张一展', '2016年05月
 INSERT INTO `comment` VALUES ('12', '11', '21', '我喜欢这个模型', '2016年05月08日_21时23分23秒');
 INSERT INTO `comment` VALUES ('13', '8', '20', '你好', '2016年05月07日_15时58分55秒');
 INSERT INTO `comment` VALUES ('14', '9', '15', '这个灯设计得不错', '2016年05月13日_19时23分24秒');
+INSERT INTO `comment` VALUES ('15', '8', '23', 'dfhyhhh', '2016年05月17日_23时27分39秒');
+INSERT INTO `comment` VALUES ('16', '9', '20', 'zxcv dfgd sgsdfg', '2016年05月18日_00时17分22秒');
+INSERT INTO `comment` VALUES ('17', '8', '20', '新东方V', '2016年05月18日_00时18分04秒');
+INSERT INTO `comment` VALUES ('18', '8', '15', '啊速度发发送发顺丰的 ', '2016年05月18日_00时19分27秒');
+INSERT INTO `comment` VALUES ('19', '8', '25', 'z', '2016年05月18日_09时03分44秒');
+INSERT INTO `comment` VALUES ('20', '8', '25', 'zhen', '2016年05月18日_09时59分56秒');
+INSERT INTO `comment` VALUES ('21', '8', '25', '制作好', '2016年05月18日_10时22分17秒');
+INSERT INTO `comment` VALUES ('22', '8', '25', '真棒！', '2016年05月18日_10时29分59秒');
+INSERT INTO `comment` VALUES ('23', '8', '24', '真好！', '2016年05月18日_10时44分03秒');
+INSERT INTO `comment` VALUES ('24', '8', '25', '好极了\r\n', '2016年05月18日_10时58分34秒');
 
 -- ----------------------------
 -- Table structure for designer
@@ -81,6 +94,32 @@ INSERT INTO `designer` VALUES ('2', '16', '23', '23', '23', 'designerimg/2.jpg',
 INSERT INTO `designer` VALUES ('3', '17', '53', '23', '54', 'designerimg/3.jpg', '212');
 INSERT INTO `designer` VALUES ('4', '18', '34', '67', '23', 'designerimg/4.jpg', '43');
 INSERT INTO `designer` VALUES ('5', '19', '12', '5', '4', 'designerimg/5.jpg', '65');
+
+-- ----------------------------
+-- Table structure for joiner
+-- ----------------------------
+DROP TABLE IF EXISTS `joiner`;
+CREATE TABLE `joiner` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userid` int(11) DEFAULT NULL,
+  `license` varchar(255) DEFAULT NULL,
+  `identitycard` varchar(255) DEFAULT NULL,
+  `agent` varchar(255) DEFAULT NULL,
+  `pic` varchar(255) DEFAULT NULL,
+  `companyaddress` varchar(255) DEFAULT NULL,
+  `jointime` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of joiner
+-- ----------------------------
+INSERT INTO `joiner` VALUES ('1', '15', 'JoinerImg/15_1463494638406_2013-02-08_16-36-50_851.jpg', 'JoinerImg/15_1463494638412_2013-02-08_16-36-40_46.jpg', 'JoinerImg/15_1463494638417_2013-02-08_16-36-50_851.jpg', 'JoinerImg/15_1463494638422_2013-02-08_11-09-59_605.jpg', '广西大学', '2016年05月17日_22时17分18秒');
+INSERT INTO `joiner` VALUES ('2', '20', 'JoinerImg/20_1463495475946_2013-02-08_16-36-40_46.jpg', 'JoinerImg/20_1463495475952_2013-02-08_16-36-50_851.jpg', 'JoinerImg/20_1463495475957_2013-02-08_17-23-59_484.jpg', 'JoinerImg/20_1463495475962_2013-02-08_16-36-33_141.jpg', '广西大学哈达是否了解', '2016年05月17日_22时31分15秒');
+INSERT INTO `joiner` VALUES ('3', '22', 'JoinerImg/22_1463497704280_2013-02-08_16-36-40_46.jpg', 'JoinerImg/22_1463497704285_2013-02-08_16-36-50_851.jpg', 'JoinerImg/22_1463497704291_2013-02-08_16-36-33_141.jpg', 'JoinerImg/22_1463497704309_2013-02-08_11-09-59_605.jpg', 'weg', '2016年05月17日_23时08分24秒');
+INSERT INTO `joiner` VALUES ('4', '21', 'JoinerImg/21_1463498244304_2013-02-08_16-36-33_141.jpg', 'JoinerImg/21_1463498244310_2013-02-08_16-36-33_141.jpg', 'JoinerImg/21_1463498244315_2013-02-08_16-36-33_141.jpg', 'JoinerImg/21_1463498244321_2013-02-08_16-36-33_141.jpg', '付款，', '2016年05月17日_23时17分24秒');
+INSERT INTO `joiner` VALUES ('5', '23', 'JoinerImg/23_1463499218891_2013-02-08_16-36-40_46.jpg', 'JoinerImg/23_1463499218896_2013-02-08_16-36-40_46.jpg', 'JoinerImg/23_1463499218916_2013-02-08_16-36-40_46.jpg', 'JoinerImg/23_1463499218922_2013-02-08_16-36-40_46.jpg', 'l;,;', '2016年05月17日_23时33分38秒');
+INSERT INTO `joiner` VALUES ('10', '25', 'JoinerImg/25_1463540516327_QQ图片20151227125052.jpg', 'JoinerImg/25_1463540516331_QQ图片20151227125052.jpg', 'JoinerImg/25_1463540516336_QQ图片20151227125052.jpg', 'JoinerImg/25_1463540516341_QQ图片20151227125052.jpg', '哈哈哈', '2016年05月18日_11时01分56秒');
 
 -- ----------------------------
 -- Table structure for letter
@@ -123,16 +162,16 @@ CREATE TABLE `model` (
   `uploadtime` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `goods_designer` (`designerid`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of model
 -- ----------------------------
-INSERT INTO `model` VALUES ('8', '1', '第1个模型', '这是我设计的第一个模型，喜欢大家喜欢', '/3durl/1.jpg', 'modelimages/1.jpg', '64', '11', '灯饰家具', '22', '100', '4562', '塑料型号1', null, null, null, null, null);
-INSERT INTO `model` VALUES ('9', '1', '第2个模型', '这是我设计的第一个模型，喜欢大家喜欢', '/3durl/2.jpg', 'modelimages/2.jpg', '49', '19', '灯饰家具', '20', '180', '213', '塑料型号2', null, null, null, null, null);
-INSERT INTO `model` VALUES ('10', '1', '第3个模型', '这是我设计的第一个模型，喜欢大家喜欢', '/3durl/3.jpg', 'modelimages/3.jpg', '28', '19', '灯饰家具', '26', '150', '1234', '塑料型号3', null, null, null, null, null);
+INSERT INTO `model` VALUES ('8', '1', '第1个模型', '这是我设计的第一个模型，喜欢大家喜欢', '/3durl/1.jpg', 'modelimages/1.jpg', '85', '23', '灯饰家具', '50', '100', '4562', '塑料型号1', null, null, null, null, null);
+INSERT INTO `model` VALUES ('9', '1', '第2个模型', '这是我设计的第一个模型，喜欢大家喜欢', '/3durl/2.jpg', 'modelimages/2.jpg', '53', '23', '灯饰家具', '21', '180', '213', '塑料型号2', null, null, null, null, null);
+INSERT INTO `model` VALUES ('10', '1', '第3个模型', '这是我设计的第一个模型，喜欢大家喜欢', '/3durl/3.jpg', 'modelimages/3.jpg', '29', '19', '灯饰家具', '27', '150', '1234', '塑料型号3', null, null, null, null, null);
 INSERT INTO `model` VALUES ('11', '1', '第4个模型', '这是我设计的第一个模型，喜欢大家喜欢', '/3durl/4.jpg', 'modelimages/4.jpg', '28', '14', '灯饰家具', '19', '190', '4311', '塑料型号5', null, null, null, null, null);
-INSERT INTO `model` VALUES ('16', '1', '单车骨架', '爱上了款到即发蓝山咖啡', 'stlmodel/15_1463324934149_shaonv.stl', 'modelimages/15_1463324934151_2013-02-08_11-08-43_867.jpg', '2', '1', '灯饰家具', '3', null, '234', '不锈钢', 'modelimages/15_1463324934161_2013-02-08_16-36-40_46.jpg', 'modelimages/15_1463324934185_2013-02-08_16-36-19_788.jpg', 'modelimages/15_1463324934193_2013-02-08_16-36-50_851.jpg', 'modelimages/15_1463324934198_2013-02-09_18-35-50_110.jpg', '2016年05月15日_23时08分54秒');
+INSERT INTO `model` VALUES ('19', '1', 'hellobike', '第二个单车骨架', 'stlmodel/15_1463671717000_bike_frame.stl', 'modelimages/15_1463671717023_bike (1).jpg', '2', null, '灯饰家具', null, null, '2342', '不锈钢', 'modelimages/15_1463671717028_bike (2).jpg', 'modelimages/15_1463671717032_bike (3).jpg', 'modelimages/15_1463671717037_bike (4).jpg', 'modelimages/15_1463671717044_bike (1).jpg', '2016年05月19日_23时28分37秒');
 
 -- ----------------------------
 -- Table structure for printorder
@@ -178,9 +217,9 @@ INSERT INTO `userinfo` VALUES ('16', 'Ding', '666666', '18877153154', '广西大
 INSERT INTO `userinfo` VALUES ('17', '微风', '666666', '18877153154', '广西大学', '男', '1353159782@qq.com', '设计师', null);
 INSERT INTO `userinfo` VALUES ('18', '黄玲玲', '666666', '32131313212', '广西大学', '女', '1353159782@qq.com', '设计师', null);
 INSERT INTO `userinfo` VALUES ('19', '包奇', '666666', '68785232125', '广西大学', '男', '1353159782@qq.com', '设计师', null);
-INSERT INTO `userinfo` VALUES ('20', 'yonghu', '666666', '54634243455', '广西大学', '男', '5646513546@qq.com', '个人用户', null);
-INSERT INTO `userinfo` VALUES ('21', '用户', '666666', '87965262361', '广西大学', '男', '4646518644@qq.com', '个人用户', null);
-INSERT INTO `userinfo` VALUES ('22', 'lzl', '666666', '184453121', '广西大学计算机与电子信息学院', '男', '454998386@qq.com', '个人用户', 'upload/userinfoImg/1463207673048_7.jpg');
-INSERT INTO `userinfo` VALUES ('23', 'dd', '666666', '16165113212', '广西大学狗洞', '女', '454998386@qq.com', '个人用户', 'upload/userinfoImg/1463208869820_2013-03-17_11-04-44_950.jpg');
-INSERT INTO `userinfo` VALUES ('24', 'dang', '666666', '23535345345', '广西大学专家楼', '女', '3453534@163.com', '个人用户', 'upload/userinfoImg/1463209071437_2.jpg');
-INSERT INTO `userinfo` VALUES ('25', 'zyz', '666666', '67888678678', '骞胯タ澶у', '濂�', '464654@qq.com', '个人用户', 'upload/userinfoImg/1463215705822_800 (5).jpg');
+INSERT INTO `userinfo` VALUES ('20', 'yonghu', '666666', '54634243455', '广西大学', '男', '5646513546@qq.com', '入驻商', null);
+INSERT INTO `userinfo` VALUES ('21', '用户', '666666', '87965262361', '广西大学', '男', '4646518644@qq.com', '入驻商', null);
+INSERT INTO `userinfo` VALUES ('22', 'lzl', '666666', '184453121', '广西大学计算机与电子信息学院', '男', '454998386@qq.com', '入驻商', 'upload/userinfoImg/1463207673048_7.jpg');
+INSERT INTO `userinfo` VALUES ('23', 'dd', '666666', '16165113212', '广西大学狗洞', '女', '454998386@qq.com', '入驻商', 'upload/userinfoImg/1463208869820_2013-03-17_11-04-44_950.jpg');
+INSERT INTO `userinfo` VALUES ('24', 'dang', '666666', '23535345345', '广西大学专家楼', '女', '3453534@163.com', '入驻商', 'upload/userinfoImg/1463209071437_2.jpg');
+INSERT INTO `userinfo` VALUES ('25', 'zyz', '666666', '67888678678', '骞胯タ澶у', '濂�', '464654@qq.com', '入驻商', 'upload/userinfoImg/1463215705822_800 (5).jpg');

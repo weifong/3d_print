@@ -39,7 +39,7 @@ public class UpComment extends HttpServlet {
 		String strComment=request.getParameter("comment_content");
 		System.out.println("strCommnet="+strComment);
 		int imodelid=Integer.parseInt(request.getSession().getAttribute("model_id").toString());
-		int iuserid=Integer.parseInt(request.getSession().getAttribute("user_id").toString());
+		int iuserid=Integer.parseInt(request.getSession().getAttribute("userid").toString());
 		SimpleDateFormat simpDateFormate=new SimpleDateFormat("",Locale.SIMPLIFIED_CHINESE);
 		simpDateFormate.applyPattern("yyyy年MM月dd日_HH时mm分ss秒"); 
 		String strTime=simpDateFormate.format(new Date());

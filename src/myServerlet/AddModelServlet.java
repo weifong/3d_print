@@ -124,7 +124,10 @@ public class AddModelServlet extends HttpServlet {
 			simpDateFormate.applyPattern("yyyy年MM月dd日_HH时mm分ss秒"); 
 			String strTime=simpDateFormate.format(new Date());
 			String strSql="insert into model(designerid,model_name,model.describe,3d_url,3dimage_url,smallimg1,smallimg2,smallimg3,smallimg4,model_type,suite_type,uploadtime,size)values("+iDesigerId+",'"+strModelName+"','"+strDescribe+"','"+strStlName+"','"+strBigImg+"','"+strSmallImg1+"','"+strSmallImg2+"','"+strSmallImg3+"','"+strSmallImg4+"','"+strType+"','"+strSuit+"','"+strTime+"',"+strsize+")";
-			db.updateSql(strSql);
+			if(db.updateSql(strSql))
+			{
+				response.sendRedirect("shejishigeren.jsp");
+			}
 			
 		}catch(Exception e){
 			System.out.println("Unable to upload the file");
